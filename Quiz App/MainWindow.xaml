@@ -12,8 +12,8 @@
             <Border BorderThickness="3" CornerRadius="10" Background="LightGray">
                 <Border.BorderBrush>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="Gray" Offset="0"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
+                        <GradientStop Color="LightGray" Offset="0"/>
+                        <GradientStop Color="Gray" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.BorderBrush>
 
