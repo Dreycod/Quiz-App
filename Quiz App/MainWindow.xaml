@@ -67,6 +67,10 @@
     </Window.Template>
 
     <Grid>
-
+        <TextBox x:Name="TB_Amount" HorizontalAlignment="Left" Margin="427,127,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_Category" HorizontalAlignment="Left" Margin="358,199,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_Difficulty" HorizontalAlignment="Left" Margin="332,250,0,0" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_Type" HorizontalAlignment="Left" Margin="427,322,0,0" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="614,217,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Window>
