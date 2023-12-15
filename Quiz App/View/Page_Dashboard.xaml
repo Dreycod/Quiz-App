@@ -6,23 +6,26 @@
              xmlns:local="clr-namespace:Quiz_App.View"
              mc:Ignorable="d" 
              Background="Transparent"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" >
 
-    <Border BorderThickness="10" CornerRadius="25" Background="White">
-        <Grid Margin="10">
+    <Border BorderThickness="10" CornerRadius="35" Background="White">
+        <Grid Margin="25">
             <Grid.RowDefinitions>
-                <RowDefinition Height="4*"/>
-                <RowDefinition Height="6*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="6.5*"/>
             </Grid.RowDefinitions>
             
             <Grid Name="Player_Info" Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="2.3*"/>
                     <ColumnDefinition Width="7*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image Source="Ressources/Images/Profile.png" Grid.Column="0"/>
-                
+                <Image Source="/Ressources/Images/Profile.png" HorizontalAlignment="Left" Grid.Column="0"/>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Player Name" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Text="Player Score" FontSize="20" FontWeight="Bold"/>
+                </StackPanel>
             </Grid>
             <Grid Name="Details" Grid.Row="1">
                 
