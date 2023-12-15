@@ -6,6 +6,66 @@
         xmlns:local="clr-namespace:Quiz_App"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Template>
+        <ControlTemplate TargetType="{x:Type Window}">
+            <Border BorderThickness="3" CornerRadius="10" Background="LightGray">
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Gray" Offset="0"/>
+                        <GradientStop Color="LightGray" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+
+                <Grid Name="Top_Bar">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" CornerRadius="10,10,0,0" MouseDown="TopBar_MouseDown">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <GradientStop Color="Gray" Offset="0.0" />
+                                <GradientStop Color="LightGray" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Quiz Game" FontSize="20" FontWeight="Bold" Margin="10"/>
+                            <Button Grid.Column="1" Name="Close_Btn" Content="X" Margin="10" Width="30" Click="CloseButton_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border Background="{TemplateBinding Background}">
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="Red"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                    </Border>
+                    <ContentPresenter Grid.Row="1"/>
+                </Grid>
+                <!-- Remake the grid applying the drag and the close from mainwindow.cs-->
+
+            </Border>
+        </ControlTemplate>
+    </Window.Template>
+
     <Grid>
 
     </Grid>
