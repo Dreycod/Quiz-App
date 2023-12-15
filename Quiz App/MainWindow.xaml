@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz_App"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="MainWindow" Height="450" Width="800">
 
     <Window.Template>
@@ -60,13 +61,24 @@
                     </Border>
                     <ContentPresenter Grid.Row="1"/>
                 </Grid>
-                <!-- Remake the grid applying the drag and the close from mainwindow.cs-->
-
             </Border>
         </ControlTemplate>
     </Window.Template>
-
+    
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
 
+        <!-- ********************** Content **************************** -->
+        <Grid Name="Grid_Content"  Grid.Column="1" Background="Transparent">
+        </Grid>
+        <!-- ********************** End of Content ********************* -->
+        <!-- ********************** Dashboard ************************** -->
+        <Grid Name="Grid_Dashboard" Grid.Column="0" Background="Transparent">
+
+        </Grid>
+        <!-- ********************** End of Dashboard ******************* -->
     </Grid>
 </Window>

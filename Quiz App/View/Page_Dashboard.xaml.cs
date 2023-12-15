@@ -13,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Quiz_App
+namespace Quiz_App.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour Page_Dashboard.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page_Dashboard : UserControl
     {
-        public MainWindow()
+        public Page_Dashboard()
         {
             InitializeComponent();
-        }
-        private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }   
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
         }
     }
 }

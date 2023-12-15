@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Controller\" />
     <Folder Include="Ressources\Images\" />
     <Folder Include="Services\" />
   </ItemGroup>
