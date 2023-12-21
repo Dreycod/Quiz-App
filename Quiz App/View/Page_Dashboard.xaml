@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Quiz_App.View"
              mc:Ignorable="d" 
              Background="Transparent"
-             d:DesignHeight="450" d:DesignWidth="800" >
+             d:DesignHeight="700" d:DesignWidth="1050" >
 
     <Border BorderThickness="10" CornerRadius="35" Background="White">
         <Grid Margin="25">
@@ -17,20 +17,73 @@
             
             <Grid Name="Player_Info" Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2.3*"/>
+                    <ColumnDefinition Width="2.5*"/>
                     <ColumnDefinition Width="7*"/>
                 </Grid.ColumnDefinitions>
 
                 <Image Source="/Ressources/Images/Profile.png" HorizontalAlignment="Left" Grid.Column="0"/>
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="Player Name" FontSize="20" FontWeight="Bold"/>
-                    <TextBlock Text="Player Score" FontSize="20" FontWeight="Bold"/>
-                </StackPanel>
+                
+                <Grid Grid.Column="1" Margin="0,10,0,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1.2*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <Label Content="Player Name" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource Main_Font}"/>
+                    <Label Content="Lvl. 17" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Center" Style="{StaticResource Main_Font}"/>
+                    <ProgressBar Name="PB_Player" Grid.Row="2" Value="70" Style="{StaticResource PB_Main}"/>
+
+                    <Grid Name="Grid_PlrInfos" Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        
+                        
+                    </Grid>
+                </Grid>
+
             </Grid>
+            
             <Grid Name="Details" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Name="Grid_Achievements" Grid.Column="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.16*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Achievements" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource Main_Font}"/>
+                        <Button Name="Btn_Achievements" Content="See All" Grid.Row="0" HorizontalAlignment="Right" Style="{StaticResource Btn_Extra}"/>
+                    </StackPanel>
+                </Grid>
                 
-                
-                <Button Background="Black" Grid.Row="1"/>
+                <Grid Name="Grid_Categories" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.16*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.3*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                    </Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Categories" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource Main_Font}"/>
+                        <Button Name="Btn_Categories" Content="View All" Grid.Row="0" HorizontalAlignment="Right" Style="{StaticResource Btn_Extra}"/>
+                    </StackPanel>
+                    
+                </Grid>
             </Grid>
         </Grid>
     </Border>
