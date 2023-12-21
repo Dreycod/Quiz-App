@@ -67,10 +67,16 @@
     </Window.Template>
 
     <Grid>
-        <TextBox x:Name="TB_Amount" HorizontalAlignment="Left" Margin="427,127,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TB_Category" HorizontalAlignment="Left" Margin="358,199,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TB_Difficulty" HorizontalAlignment="Left" Margin="332,250,0,0" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_Amount" HorizontalAlignment="Left" Margin="428,0,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="TB_Category" HorizontalAlignment="Left" Margin="427,219,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_Difficulty" HorizontalAlignment="Left" Margin="427,264,0,0" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TB_Type" HorizontalAlignment="Left" Margin="427,322,0,0" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" Width="120"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="614,217,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Name="QuestionLabel" Content="Label" Margin="41,22,28,299" FontSize="20"/>
+        <RadioButton Name="Answer1Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,103,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Answer2Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,135,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Answer3Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,169,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="Answer4Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,201,0,0" VerticalAlignment="Top"/>
+        <Button Name="ConfirmAnswersButton" Content="Confirm" HorizontalAlignment="Left" Margin="41,232,0,0" VerticalAlignment="Top" Width="75" Click="ConfirmAnswersButton_Click"/>
     </Grid>
 </Window>
