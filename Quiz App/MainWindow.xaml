@@ -72,7 +72,7 @@
         <TextBox x:Name="TB_Difficulty" HorizontalAlignment="Left" Margin="427,264,0,0" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TB_Type" HorizontalAlignment="Left" Margin="427,322,0,0" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" Width="120"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="614,217,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Label Name="QuestionLabel" Content="Label" Margin="41,22,28,299" FontSize="20"/>
+        <TextBox Name="QuestionLabel" Text="Question" Margin="41,22,28,299" FontSize="20" TextWrapping="Wrap" IsReadOnly="True" Background="Transparent" BorderThickness="0"/>
         <RadioButton Name="Answer1Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,103,0,0" VerticalAlignment="Top"/>
         <RadioButton Name="Answer2Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,135,0,0" VerticalAlignment="Top"/>
         <RadioButton Name="Answer3Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,169,0,0" VerticalAlignment="Top"/>
