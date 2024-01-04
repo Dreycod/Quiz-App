@@ -9,15 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Ressources\Images\Profile.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Controller\" />
-    <Folder Include="Ressources\Images\" />
     <Folder Include="View\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ressources\Images\Profile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
