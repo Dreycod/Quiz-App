@@ -7,23 +7,27 @@
     <Style x:Key="LB_Style" TargetType="{x:Type Label}">
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="Foreground" Value="{StaticResource Main_Background}"/>
-        <Setter Property="Margin" Value="20,0"/>
+    </Style>
+    
+    <Style x:Key="LB_Style_B" TargetType="{x:Type Label}">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Foreground" Value="{StaticResource Main_Background}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
     </Style>
 
     <Style x:Key="PB_Main" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource MainColor}"/>
-        <Setter Property="Margin" Value="25,20"/>
+        <Setter Property="Margin" Value="0,15"/>
     </Style>
 
     <Style x:Key="Btn_Extra" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{StaticResource MainColor}"/>
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="Margin" Value="25,0"/>
-        <Setter Property="Padding" Value="10,5"/>
         <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="BorderBrush" Value="{StaticResource MainColor}"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="TextBlock.FontWeight" Value="Bold"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
