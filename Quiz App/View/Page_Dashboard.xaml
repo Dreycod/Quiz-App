@@ -31,8 +31,8 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <Label Content="Player Name" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource LB_Style}"/>
-                    <Label Content="Lvl. 17" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Center" Style="{StaticResource LB_Style}"/>
+                    <Label x:Name="LB_Username" Content="Player Name" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource LB_Style}"/>
+                    <Label x:Name="LB_Level" Content="Lvl. 17" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Center" Style="{StaticResource LB_Style}"/>
                     <ProgressBar Name="PB_Player" Grid.Row="2" Value="70" Style="{StaticResource PB_Main}"/>
 
 

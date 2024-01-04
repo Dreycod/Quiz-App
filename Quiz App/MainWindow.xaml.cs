@@ -36,7 +36,7 @@ namespace Quiz_App
         // Create me a dictionnary of string and int 
         string username = "Default";
         int level = 1;
-        int exp = 0;
+        int exp = 10;
         int wins = 0;
         List<string> achievements = new List<string>();
         double fastestTime = 0;
@@ -60,6 +60,22 @@ namespace Quiz_App
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(dashboard);
 
+            player.SetUsername(username);
+            player.SetLevel(level);
+            player.SetExp(exp);
+            player.SetWins(wins);
+            player.SetAchievements(achievements);
+            player.SetFastestTime(fastestTime);
+            player.SetCorrectAnswers(correctAnswers);
+
+
+            // Set the player's informations
+            dashboard.LB_Username.Content = player.GetUsername();
+            dashboard.LB_Level.Content = "Lvl." + player.GetLevel();
+
+
+            dashboard.PB_Player.Maximum = player.GetMaxExp();
+            dashboard.PB_Player.Value = player.GetExp();
         }
 
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
