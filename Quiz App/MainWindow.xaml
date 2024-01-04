@@ -78,5 +78,7 @@
         <RadioButton Name="Answer3Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,169,0,0" VerticalAlignment="Top"/>
         <RadioButton Name="Answer4Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,201,0,0" VerticalAlignment="Top"/>
         <Button Name="ConfirmAnswersButton" Content="Confirm" HorizontalAlignment="Left" Margin="41,232,0,0" VerticalAlignment="Top" Width="75" Click="ConfirmAnswersButton_Click"/>
+        <ProgressBar x:Name="ExpBar" HorizontalAlignment="Left" Height="21" Margin="350,60,0,0" VerticalAlignment="Top" Width="319" Foreground="#FF3D3D3D" Value="27"/>
+        <Button x:Name="ExpButton" Content="Free Exp" HorizontalAlignment="Left" Margin="486,118,0,0" VerticalAlignment="Top" Click="ExpButton_Click"/>
     </Grid>
 </Window>

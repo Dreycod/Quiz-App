@@ -17,6 +17,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Windows.Input;
 using Quiz_App.Controller;
 using Quiz_App.Model;
+using System.Reflection.Emit;
 
 namespace Quiz_App
 {
@@ -32,17 +33,24 @@ namespace Quiz_App
         string Type;
 
         // Create me a dictionnary of string and int 
-        
+        string username = "Default";
+        int level = 1;
+        int exp = 0;
+        int wins = 0;
+        List<string> achievements = new List<string>();
+        double fastestTime = 0;
+        int correctAnswers = 0;
 
         QuizAPI quizAPI;
         Category category;
-
+        Player player;
         public MainWindow()
         {
             InitializeComponent();
 
             quizAPI = new QuizAPI();
-            category = new Category("");
+            category = new Category("Books");
+            player = new Player(username, level, exp, wins, achievements, fastestTime, correctAnswers);
         }
 
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
@@ -112,6 +120,16 @@ namespace Quiz_App
         }
 
         private void ConfirmAnswersButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ExpButton_Click(object sender, RoutedEventArgs e)
+        {
+            player.AddExp(10);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Automation.Peers;
+using System.Windows.Controls;
 
 namespace Quiz_App.Controller
 {
@@ -17,7 +19,6 @@ namespace Quiz_App.Controller
         private double FastestTime;
         private int CorrectAnswers;
 
-
         public Player(string username, int level, int exp, int wins, List<string> achievements, double fastestTime, int correctAnswers)
         {
             Username = username;
@@ -27,7 +28,10 @@ namespace Quiz_App.Controller
             Achievements = achievements;
             FastestTime = fastestTime;
             CorrectAnswers = correctAnswers;
+
+
         }
+        public ProgressBar ExpBar { get; set; }
 
         public string GetUsername()
         {
@@ -82,6 +86,7 @@ namespace Quiz_App.Controller
         public void SetExp(int exp)
         {
             Exp = exp;
+            ExpBar.Value = Exp;
         }
 
         public void SetWins(int wins)
@@ -122,6 +127,8 @@ namespace Quiz_App.Controller
                 MaxExp *= 2;
                 Level++;
             }
+            ExpBar.Maximum = MaxExp;
+            ExpBar.Value = Exp;
         }
 
         public void AddCorrectAnswer()
