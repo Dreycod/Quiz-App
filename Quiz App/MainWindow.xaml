@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Quiz_App"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="697" Width="1059">
 
     <Window.Template>
         <ControlTemplate TargetType="{x:Type Window}">
@@ -67,8 +68,8 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
 
         <!-- ********************** Content *************************** -->
