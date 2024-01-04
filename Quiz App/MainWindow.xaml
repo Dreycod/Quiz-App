@@ -71,7 +71,7 @@
             <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- ********************** Content **************************** -->
+        <!-- ********************** Content *************************** -->
         <Grid Name="Grid_Content"  Grid.Column="1" Background="Transparent">
         </Grid>
         <!-- ********************** End of Content ********************* -->
