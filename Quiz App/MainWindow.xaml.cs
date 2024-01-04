@@ -61,10 +61,6 @@ namespace Quiz_App
             category = new Category(content);
         }
 
-        private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
         public async void GetQuiz()
         {
             Root root = await quizAPI.GetQuizRoot(Amount, Category, Difficulty, Type);
@@ -114,10 +110,6 @@ namespace Quiz_App
             }    
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
 
         private void ConfirmAnswersButton_Click(object sender, RoutedEventArgs e)
         {
@@ -136,7 +128,7 @@ namespace Quiz_App
         private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
-        }   
+        }
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
