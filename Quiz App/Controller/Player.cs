@@ -31,6 +31,7 @@ namespace Quiz_App.Controller
 
 
         }
+        // sparklin bottles of champagne
         public ProgressBar ExpBar { get; set; }
 
         public string GetUsername()
