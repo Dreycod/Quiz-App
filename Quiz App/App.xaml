@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Quiz_App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="Ressources/styles.xaml"/>
+        <ResourceDictionary Source="/Ressources/Styles.xaml"/>
     </Application.Resources>
 </Application>

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Quiz_App.View"
              mc:Ignorable="d" 
              Background="Transparent"
-             d:DesignHeight="700" d:DesignWidth="1050" >
+             d:DesignHeight="700" d:DesignWidth="1050">
 
     <Border BorderThickness="10" CornerRadius="35" Background="White">
         <Grid Margin="25">
@@ -22,7 +22,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Image Source="/Ressources/Images/Profile.png" HorizontalAlignment="Left" Grid.Column="0"/>
-                
+
                 <Grid Grid.Column="1" Margin="0,10,0,10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.2*"/>
@@ -30,10 +30,11 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    
-                    <Label Content="Player Name" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource Main_Font}"/>
-                    <Label Content="Lvl. 17" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Center" Style="{StaticResource Main_Font}"/>
+
+                    <Label Content="Player Name" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource LB_Style}"/>
+                    <Label Content="Lvl. 17" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Center" Style="{StaticResource LB_Style}"/>
                     <ProgressBar Name="PB_Player" Grid.Row="2" Value="70" Style="{StaticResource PB_Main}"/>
+
 
                     <Grid Name="Grid_PlrInfos" Grid.Row="3">
                         <Grid.ColumnDefinitions>
@@ -41,12 +42,11 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        
-                        
-                        
+
+
+
                     </Grid>
                 </Grid>
-
             </Grid>
             
             <Grid Name="Details" Grid.Row="1">
@@ -61,7 +61,7 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Achievements" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource Main_Font}"/>
+                        <Label Content="Achievements" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource LB_Style}"/>
                         <Button Name="Btn_Achievements" Content="See All" Grid.Row="0" HorizontalAlignment="Right" Style="{StaticResource Btn_Extra}"/>
                     </StackPanel>
                 </Grid>
@@ -79,7 +79,7 @@
                         
                     </Grid>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Categories" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource Main_Font}"/>
+                        <Label Content="Categories" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource LB_Style}"/>
                         <Button Name="Btn_Categories" Content="View All" Grid.Row="0" HorizontalAlignment="Right" Style="{StaticResource Btn_Extra}"/>
                     </StackPanel>
                     
