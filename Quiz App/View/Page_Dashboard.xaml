@@ -6,15 +6,15 @@
              xmlns:local="clr-namespace:Quiz_App.View"
              mc:Ignorable="d" 
              Background="Transparent"
-             d:DesignHeight="700" d:DesignWidth="1050">
-<!-- test-->
-    <Border BorderThickness="10" CornerRadius="35" Background="White">
-        <Grid Margin="25">
+             d:DesignHeight="539" d:DesignWidth="737">
+    <!-- test-->
+    <Border BorderThickness="10" CornerRadius="35" Background="#ededed">
+        <Grid Margin="15">
             <Grid.RowDefinitions>
                 <RowDefinition Height="5*"/>
                 <RowDefinition Height="6.5*"/>
             </Grid.RowDefinitions>
-            
+
             <Grid Name="Player_Info" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2.5*"/>
@@ -23,7 +23,7 @@
 
                 <Image Source="/Ressources/Images/Profile.png" HorizontalAlignment="Left" Grid.Column="0"/>
 
-                <Grid Grid.Column="1" Margin="0,10,0,10">
+                <Grid Grid.Column="1" Margin="20,10,0,15">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1.2*"/>
                         <RowDefinition/>
@@ -31,8 +31,8 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <Label x:Name="LB_Username" Content="Player Name" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource LB_Style}"/>
-                    <Label x:Name="LB_Level" Content="Lvl. 17" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Center" Style="{StaticResource LB_Style}"/>
+                    <Label Name="LB_Username" Content="Player Name" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource LB_Style_B}"/>
+                    <Label Name="LB_Level" Content="Lvl. 17" FontWeight="Bold" Grid.Row="1" VerticalAlignment="Center" Style="{StaticResource LB_Style_B}"/>
                     <ProgressBar Name="PB_Player" Grid.Row="2" Value="70" Style="{StaticResource PB_Main}"/>
 
 
@@ -40,15 +40,49 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="1.1*"/>
                         </Grid.ColumnDefinitions>
 
+                        <Grid Grid.Column="0" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.4*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderThickness="0.2" BorderBrush="Black" CornerRadius="5" Background="White"/>
+                            <Image Grid.Column="0" Source="/Ressources/Images/Crown.png" Height="Auto" Width="Auto"/>
+                            <Label Name="LB_Victories" Grid.Column="1" Content="Victories: 0" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.4*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderThickness="0.2" BorderBrush="Black" CornerRadius="5" Background="White"/>
+                            <Image Grid.Column="0" Source="/Ressources/Images/Time.png" Height="30" Width="30"/>
+                            <Label Name="LB_Time" Grid.Column="1" Content="Fastest Time: 0" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                        </Grid>
+
+                        <Grid Grid.Column="2" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.35*"/>
+                                <ColumnDefinition Width="0.8*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderThickness="0.2" BorderBrush="Black" CornerRadius="5" Background="White"/>
+                            <Image Grid.Column="0" Source="/Ressources/Images/Answer.png" Height="30" Width="30"/>
+                            <Label Name="LB_Answers" Grid.Column="1" Content="Correct Answers: 20m" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+
+
+                        </Grid>
 
 
                     </Grid>
                 </Grid>
             </Grid>
-            
+
             <Grid Name="Details" Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -57,32 +91,67 @@
 
                 <Grid Name="Grid_Achievements" Grid.Column="0" >
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="0.16*"/>
+                        <RowDefinition Height="0.25*"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Achievements" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource LB_Style}"/>
-                        <Button Name="Btn_Achievements" Content="See All" Grid.Row="0" HorizontalAlignment="Right" Style="{StaticResource Btn_Extra}"/>
-                    </StackPanel>
-                </Grid>
-                
-                <Grid Name="Grid_Categories" Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.16*"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
+
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
-                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.35*"/>
                         </Grid.ColumnDefinitions>
-                        
+                        <Label Grid.Column="0" Content="Achievements" Grid.Row="0" Style="{StaticResource LB_Style_B}"/>
+                        <Button Grid.Column="1" Name="Btn_Achievements" Content="View All" Grid.Row="0" Style="{StaticResource Btn_Extra}"/>
                     </Grid>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Categories" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Top" Style="{StaticResource LB_Style}"/>
-                        <Button Name="Btn_Categories" Content="View All" Grid.Row="0" HorizontalAlignment="Right" Style="{StaticResource Btn_Extra}"/>
-                    </StackPanel>
-                    
+
+                    <ListView Name="Achievements" Grid.Row="1" Background="Transparent">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition Width="0.8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="Auto" Width="Auto"/>
+                                    <Label Grid.Column="1" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </Grid>
+
+                <Grid Name="Grid_Categories" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.25*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.35*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="Categories" FontWeight="Bold" Grid.Row="0" Style="{StaticResource LB_Style_B}"/>
+                        <Button Grid.Column="1" Name="Btn_Categories" Content="View All" Grid.Row="0" Style="{StaticResource Btn_Extra}"/>
+
+                    </Grid>
+
+                    <ListView Name="Categories" Grid.Row="1" Background="Transparent">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition Width="0.8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="Auto" Width="Auto"/>
+                                    <Label Grid.Column="1" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Grid>
             </Grid>
         </Grid>
