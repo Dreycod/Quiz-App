@@ -24,5 +24,11 @@ namespace Quiz_App.View
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //appaer message box
+            MessageBox.Show("You have clicked the button");
+        }
     }
 }

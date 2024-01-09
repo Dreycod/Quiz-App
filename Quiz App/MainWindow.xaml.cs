@@ -81,11 +81,19 @@ namespace Quiz_App
             dashboard.PB_Player.Maximum = player.GetMaxExp();
             dashboard.PB_Player.Value = player.GetExp();
 
-            Ls_Achievements.Add(new Achievements() { ImageUrl = "Ressources/Images/Achievements/Silver.png", Content = "Win your first game"});
+            Ls_Achievements.Add(new Achievements() { ImageUrl = "/Ressources/Images/Achievements/Silver.png", Content = "Win your first game"});
             dashboard.LV_Achievements.ItemsSource = Ls_Achievements;
 
-            Ls_Category.Add(new Category("General Knowledge") {ImageUrl = "Ressources/Images/Categories/General_Knowledge.jpg", Content = "General Knowledge"});
+            Ls_Category.Add(new Category("General Knowledge") {ImageUrl = "/Ressources/Images/Categories/General_Knowledge.jpg", Content = "General Knowledge"});
             dashboard.LV_Categories.ItemsSource = Ls_Category;
+        }
+
+        //listview clickable event handler itemselected for category
+        private void LV_Categories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Category category = (Category)dashboard.LV_Categories.SelectedItem;
+            StringCategory = category.Content;
+            MessageBox.Show(StringCategory);
         }
 
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
