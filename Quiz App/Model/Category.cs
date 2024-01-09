@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Quiz_App.Model
 {
-    internal class Category
+    public class Category
     {
         private string Name;
         private int ID;
+
+        public string Content { get; set; }
+        public string ImageUrl { get; set; }
 
         private Dictionary<string, int> categories = new Dictionary<string, int>()
         {

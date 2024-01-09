@@ -47,6 +47,10 @@ namespace Quiz_App
         Player player;
 
         Page_Dashboard dashboard;
+
+        List<Achievements> Ls_Achievements = new List<Achievements>();
+        List<Category> Ls_Category = new List<Category>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -76,6 +80,12 @@ namespace Quiz_App
 
             dashboard.PB_Player.Maximum = player.GetMaxExp();
             dashboard.PB_Player.Value = player.GetExp();
+
+            Ls_Achievements.Add(new Achievements() { ImageUrl = "Ressources/Images/Achievements/Silver.png", Content = "Win your first game"});
+            dashboard.LV_Achievements.ItemsSource = Ls_Achievements;
+
+            Ls_Category.Add(new Category("General Knowledge") {ImageUrl = "Ressources/Images/Categories/General_Knowledge.jpg", Content = "General Knowledge"});
+            dashboard.LV_Categories.ItemsSource = Ls_Category;
         }
 
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
