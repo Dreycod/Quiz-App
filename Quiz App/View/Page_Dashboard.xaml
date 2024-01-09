@@ -104,7 +104,7 @@
                         <Button Grid.Column="1" Name="Btn_Achievements" Content="View All" Grid.Row="0" Style="{StaticResource Btn_Extra}"/>
                     </Grid>
 
-                    <ListView Name="Achievements" Grid.Row="1" Background="Transparent">
+                    <ListView Name="LV_Achievements" Grid.Row="1" Background="Transparent">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
@@ -138,7 +138,7 @@
                         
                     </Grid>
 
-                    <ListView Name="Categories" Grid.Row="1" Background="Transparent">
+                    <ListView Name="LV_Categories" Grid.Row="1" Background="Transparent">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
