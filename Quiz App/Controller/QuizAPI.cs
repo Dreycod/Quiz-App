@@ -14,6 +14,7 @@ namespace Quiz_App.Controller
 
         public QuizAPI() 
         {
+
         }
 
         public async Task<Root> GetQuizRoot(int amount, int category, string difficulty, string type)

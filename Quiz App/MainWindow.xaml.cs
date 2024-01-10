@@ -34,67 +34,28 @@ namespace Quiz_App
         string Difficulty;
         string Type;
 
-        // Create me a dictionnary of string and int 
-        string username = "Default";
-        int level = 1;
-        int exp = 10;
-        int wins = 0;
-        List<string> achievements = new List<string>();
-        double fastestTime = 0;
-        int correctAnswers = 0;
-
-        QuizAPI quizAPI;
-        Player player;
+        List<Achievement> Ls_Achievements = new List<Achievement>();
         List<Category> Ls_Category = new List<Category>();  
-        CategoryController categoryController;
 
-        Page_Dashboard dashboard;
-        Page_ExtraTopic extraTopic;
-
-        List<Achievements> Ls_Achievements = new List<Achievements>();
-        
+        static QuizAPI quizAPI = new QuizAPI();
+        static PlayerController playercontroller = new PlayerController();
+        static CategoryController categoryController = new CategoryController();
+        static Page_Dashboard page_dashboard = new Page_Dashboard();
+        static Page_ExtraTopic page_extratopic = new Page_ExtraTopic();
 
         public MainWindow()
         {
             InitializeComponent();
 
-            quizAPI = new QuizAPI();
-            player = new Player(username, level, exp, wins, achievements, fastestTime, correctAnswers);
-            categoryController = new CategoryController();
-            
-            // Appear dashboard_xaml Page
-            dashboard = new Page_Dashboard();
             Grid_Content.Children.Clear();
-            Grid_Content.Children.Add(dashboard);
+            Grid_Content.Children.Add(page_dashboard);
 
-            player.SetUsername(username);
-            player.SetLevel(level);
-            player.SetExp(exp);
-            player.SetWins(wins);
-            player.SetAchievements(achievements);
-            player.SetFastestTime(fastestTime);
-            player.SetCorrectAnswers(correctAnswers);
-
-
-            // Set the player's informations
-            dashboard.LB_Username.Content = player.GetUsername();
-            dashboard.LB_Level.Content = "Lvl." + player.GetLevel();
-
-
-            dashboard.PB_Player.Maximum = player.GetMaxExp();
-            dashboard.PB_Player.Value = player.GetExp();
-            Achievements Achievement = new Achievements();
-            Achievement.Content = "Win your first game";
-            Achievement.ImageUrl = "/Ressources/Images/Achievements/Silver.png";
-
-            Ls_Achievements.Add(Achievement);
-            dashboard.LV_Achievements.ItemsSource = Ls_Achievements;
             Ls_Category.Add(categoryController.GetCategory("General Knowledge"));
             Ls_Category.Add(categoryController.GetCategory("Computers"));
             Ls_Category.Add(categoryController.GetCategory("Anime & Manga"));
             Ls_Category.Add(categoryController.GetCategory("History"));
 
-            dashboard.LV_Categories.ItemsSource = Ls_Category;
+            page_dashboard.UpdateInfo(playercontroller.GetDashBoardInfo(), Ls_Category);
         }
 
         //listview clickable event handler itemselected for category
@@ -107,9 +68,8 @@ namespace Quiz_App
 
         private void DashboardBTN_Click(object sender, RoutedEventArgs e)
         {
-            dashboard = new Page_Dashboard();
             Grid_Content.Children.Clear();
-            Grid_Content.Children.Add(dashboard);
+            Grid_Content.Children.Add(page_dashboard);
         }
 
         private void AchievementsBTN_Click(object sender, RoutedEventArgs e)
@@ -121,10 +81,8 @@ namespace Quiz_App
 
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
         {
-            extraTopic = new Page_ExtraTopic();
             Grid_Content.Children.Clear();
-            Grid_Content.Children.Add(extraTopic);
-            
+            Grid_Content.Children.Add(page_extratopic);
         }
 
         public async void GetQuiz()
@@ -184,7 +142,7 @@ namespace Quiz_App
 
         private void ExpButton_Click(object sender, RoutedEventArgs e)
         {
-            player.AddExp(10);
+            playercontroller.AddExp(10);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

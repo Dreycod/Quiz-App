@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quiz_App.Model
 {
-    public class Achievements
+    public class Achievement
     {
         //    public string AchievementName { get; set; }
         //    public bool isAchievementUnlocked { get; set; }

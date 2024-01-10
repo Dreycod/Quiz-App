@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Quiz_App.Controller;
+using Quiz_App.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,5 +27,18 @@ namespace Quiz_App.View
         {
             InitializeComponent();
         }
+
+        public void UpdateInfo((string, List<int>, double, List<Achievement>) GeneralInfo, List<Category> categories)
+        {
+            LB_Username.Content = GeneralInfo.Item1;
+            LB_Level.Content = "Lvl." + GeneralInfo.Item2[0].ToString();
+            // LB_Wins.Content = GeneralInfo.Item2[1];
+            PB_Player.Maximum = GeneralInfo.Item2[2];
+            PB_Player.Value = GeneralInfo.Item2[3];
+            // LB_CorrectAnswers.Content = GeneralInfo.Item2[4];
+            // LB_FastestTime.Content = GeneralInfo.Item3;
+            LV_Achievements.ItemsSource = GeneralInfo.Item4;
+            LV_Categories.ItemsSource = categories;
+        }   
     }
 }
