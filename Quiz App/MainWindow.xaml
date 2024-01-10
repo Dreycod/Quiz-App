@@ -91,7 +91,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button Name="Dashboard_Btn" Grid.Row="0" Style="{StaticResource Btn_Menu}">
+            <Button Name="Dashboard_Btn" Grid.Row="0" Style="{StaticResource Btn_Menu}" Click="DashboardBTN_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
                     <TextBlock Text="Dashboard" FontSize="20" FontWeight="Bold" Margin="10"/>
@@ -105,7 +105,7 @@
                 </StackPanel>
             </Button>
 
-            <Button Name="Categories_Btn" Grid.Row="2" Style="{StaticResource Btn_Menu}">
+            <Button Name="Categories_Btn" Grid.Row="2" Style="{StaticResource Btn_Menu}" Click="CategoryBTN_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
                     <TextBlock Text="Categories" FontSize="20" FontWeight="Bold" Margin="10"/>

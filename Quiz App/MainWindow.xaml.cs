@@ -96,6 +96,13 @@ namespace Quiz_App
         //    MessageBox.Show(StringCategory);
         //}
 
+        private void DashboardBTN_Click(object sender, RoutedEventArgs e)
+        {
+            dashboard = new Page_Dashboard();
+            Grid_Content.Children.Clear();
+            Grid_Content.Children.Add(dashboard);
+        }
+
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -175,6 +182,11 @@ namespace Quiz_App
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Dashboard_Btn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
