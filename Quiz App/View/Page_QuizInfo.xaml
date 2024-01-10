@@ -67,8 +67,8 @@
                     </Grid.RowDefinitions>
 
                     <Label Content="Instructions:" Grid.Row="0" Style="{StaticResource LB_Style}"/>
-                    <TextBlock Text="Description" TextWrapping="Wrap" Grid.Row="1" Style="{StaticResource TB_Description}"/>
-                </Grid>
+                    <TextBlock Text="This quiz consists of 4 multiple-choice questions. To be successful with the quizzes, it's important to be conversant with the topics. Keep the following in mind. To start, click the Start button. When finished, click the Submit."  TextWrapping="Wrap" Grid.Row="1" Style="{StaticResource TB_Description}"/>
+               </Grid>
             </Grid>
 
             <Grid x:Name="Bottom_Grid" Grid.Row="2">
@@ -80,7 +80,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button  Grid.Column="5" x:Name="Start_TopicBtn" Content="Start"/>
+                <Button  Grid.Column="5" x:Name="Start_TopicBtn" Content="Start" Click="Button_Click"/>
             </Grid>
         </Grid>
     </Border>

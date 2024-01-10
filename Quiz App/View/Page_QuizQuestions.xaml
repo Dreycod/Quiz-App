@@ -21,7 +21,7 @@
                     <RowDefinition Height="6*"/>
                     <RowDefinition Height="5*"/>
                 </Grid.RowDefinitions>
-                <Label Content="Type Quiz" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource LB_Style_B}"/>
+                <Label Name="LB_QuizName" Content="Type Quiz" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource LB_Style_B}"/>
                 <Label Content="Answer the question below" Grid.Row="1" FontSize="20" FontWeight="Light" VerticalAlignment="Top" Style="{StaticResource LB_Style_B}"/>
             </Grid>
 
@@ -39,13 +39,13 @@
 
                     <Image Source="/Ressources/Images/Categories/General_Knowledge.jpg"/>
                     <StackPanel Orientation="Vertical" Grid.Column="1">
-                        <Label Content="Question 1/20" Grid.Column="1" FontWeight="DemiBold" FontSize="20" Style="{StaticResource LB_Style_B}"/>
-                        <TextBox Text="Saviez-vous qu'André Suzuki était la?" Grid.Column="1" IsReadOnly="true" Background="Transparent" BorderThickness="0"/>
+                        <Label Name="LB_Progress" Content="Question 1/20" Grid.Column="1" FontWeight="DemiBold" FontSize="20" Style="{StaticResource LB_Style_B}"/>
+                        <TextBlock Name="LB_Question" TextWrapping="Wrap" Text="Saviez-vous qu'André Suzuki était la?" Grid.Column="1" Background="Transparent" Style="{StaticResource TB_Description}"/>
                     </StackPanel>
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <StackPanel Orientation="Vertical">
+                    <StackPanel Name="SP_RB" Orientation="Vertical">
                         <!--General knowledge is inside Ressources/Images-->
                         <Label Content="Choose answer" FontWeight="DemiBold" FontSize="20" Style="{StaticResource LB_Style_B}" Margin="10,5,5,5"/>
                         <RadioButton Name="RB_Answer1" Content="Answer 1" Margin="20,0,0,5"/>
@@ -65,7 +65,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button  Grid.Column="5" x:Name="More_AchievementsBtn" Content="More"/>
+                <Button  Grid.Column="5" x:Name="Next_Btn" Content="Next" Click="ValidateAnswer"/>
             </Grid>
         </Grid>
     </Border>

@@ -2,6 +2,7 @@
 using Quiz_App.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -39,6 +40,8 @@ namespace Quiz_App.View
             // LB_FastestTime.Content = GeneralInfo.Item3;
             LV_Achievements.ItemsSource = GeneralInfo.Item4;
             LV_Categories.ItemsSource = categories;
-        }   
+
+        }
+
     }
 }

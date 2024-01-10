@@ -11,7 +11,7 @@ namespace Quiz_App.Controller
     {
         List<Category> listCategory = new List<Category>();
 
-        static public Dictionary<string, int> categories = new Dictionary<string, int>()
+        public Dictionary<string, int> categories = new Dictionary<string, int>()
         {
             {"General Knowledge", 9},
             {"Books", 10},

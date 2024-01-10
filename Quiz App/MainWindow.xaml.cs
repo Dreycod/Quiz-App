@@ -37,7 +37,6 @@ namespace Quiz_App
         List<Achievement> Ls_Achievements = new List<Achievement>();
         List<Category> Ls_Category = new List<Category>();  
 
-        QuizAPI quizAPI = new QuizAPI();
         PlayerController playercontroller;
         CategoryController categoryController;
 
@@ -54,7 +53,6 @@ namespace Quiz_App
             page_extratopic = new Page_ExtraTopic(this);
             page_achievement = new Page_Achievements();
              
-
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_dashboard);
 
@@ -91,55 +89,6 @@ namespace Quiz_App
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_extratopic);
         }
-        public async void GetQuiz()
-        {
-            Root root = await quizAPI.GetQuizRoot(Amount, Category, Difficulty, Type);
-            if (root == null)
-            {
-                Debug.WriteLine("Error in getting data");
-                return;
-            }
-            //   QuestionLabel.Text = root.results[0].question.ToString();
-
-            if (root.results[0].type == "multiple")
-            {
-                // Randomize the answers
-                Random rnd = new Random();
-                int random = rnd.Next(0, 4);
-
-
-
-                //if (random == 0)
-                //{
-                //    Answer1Button.Content = root.results[0].correct_answer.ToString();
-                //    Answer2Button.Content = root.results[0].incorrect_answers[0].ToString();
-                //    Answer3Button.Content = root.results[0].incorrect_answers[1].ToString();
-                //    Answer4Button.Content = root.results[0].incorrect_answers[2].ToString();
-                //}
-                //else if (random == 1)
-                //{
-                //    Answer1Button.Content = root.results[0].incorrect_answers[0].ToString();
-                //    Answer2Button.Content = root.results[0].correct_answer.ToString();
-                //    Answer3Button.Content = root.results[0].incorrect_answers[1].ToString();
-                //    Answer4Button.Content = root.results[0].incorrect_answers[2].ToString();
-                //}
-                //else if (random == 2)
-                //{
-                //    Answer1Button.Content = root.results[0].incorrect_answers[0].ToString();
-                //    Answer2Button.Content = root.results[0].incorrect_answers[1].ToString();
-                //    Answer3Button.Content = root.results[0].correct_answer.ToString();
-                //    Answer4Button.Content = root.results[0].incorrect_answers[2].ToString();
-                //}
-                //else if (random == 3)
-                //{
-                //    Answer1Button.Content = root.results[0].incorrect_answers[0].ToString();
-                //    Answer2Button.Content = root.results[0].incorrect_answers[1].ToString();
-                //    Answer3Button.Content = root.results[0].incorrect_answers[2].ToString();
-                //    Answer4Button.Content = root.results[0].correct_answer.ToString();
-                //}   
-            }
-        }
-
 
         private void ConfirmAnswersButton_Click(object sender, RoutedEventArgs e)
         {

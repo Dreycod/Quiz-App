@@ -32,6 +32,10 @@
         <Setter Property="FontWeight" Value="Light"/>
     </Style>
 
+    <Style x:Key="RB_Style" TargetType="{x:Type RadioButton}">
+        
+    </Style>
+    
     <Style x:Key="PB_Main" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource MainColor}"/>
         <Setter Property="Margin" Value="0,15"/>
