@@ -89,12 +89,12 @@ namespace Quiz_App
         }
 
         //listview clickable event handler itemselected for category
-        private void LV_Categories_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Category category = (Category)dashboard.LV_Categories.SelectedItem;
-            StringCategory = category.Content;
-            MessageBox.Show(StringCategory);
-        }
+        //private void LV_Categories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    Category category = (Category)dashboard.LV_Categories.SelectedItem;
+        //    StringCategory = category.Content;
+        //    MessageBox.Show(StringCategory);
+        //}
 
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
         {

@@ -65,11 +65,11 @@
             </Border>
         </ControlTemplate>
     </Window.Template>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
 
         <!-- ********************** Content *************************** -->
@@ -81,7 +81,7 @@
 
         </Grid>
         <!-- ********************** End of Dashboard ******************* -->
-     <!--   <TextBox x:Name="TB_Amount" HorizontalAlignment="Left" Margin="414,191,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="120"/>
+        <!--   <TextBox x:Name="TB_Amount" HorizontalAlignment="Left" Margin="414,191,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TB_Category" HorizontalAlignment="Left" Margin="413,220,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TB_Difficulty" HorizontalAlignment="Left" Margin="413,265,0,0" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="TB_Type" HorizontalAlignment="Left" Margin="413,323,0,0" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" Width="120"/>

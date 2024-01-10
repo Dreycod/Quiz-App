@@ -44,7 +44,6 @@
 
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="View\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
