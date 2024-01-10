@@ -13,7 +13,7 @@ namespace Quiz_App.Controller
         private string Username;
         private int Level;
         private int Exp;
-        private int MaxExp;
+        private int MaxExp = 100;
         private int Wins;
         private List<string> Achievements = new List<string>();
         private double FastestTime;
@@ -31,8 +31,6 @@ namespace Quiz_App.Controller
 
 
         }
-        // sparklin bottles of champagne
-        public ProgressBar ExpBar { get; set; }
 
         public string GetUsername()
         {
@@ -87,7 +85,6 @@ namespace Quiz_App.Controller
         public void SetExp(int exp)
         {
             Exp = exp;
-            ExpBar.Value = Exp;
         }
 
         public void SetWins(int wins)
@@ -128,8 +125,6 @@ namespace Quiz_App.Controller
                 MaxExp *= 2;
                 Level++;
             }
-            ExpBar.Maximum = MaxExp;
-            ExpBar.Value = Exp;
         }
 
         public void AddCorrectAnswer()
