@@ -52,6 +52,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Button  Grid.Column="5" x:Name="More_AchievementsBtn" Content="More"/>
+                
             </Grid>
         </Grid>
     </Border>
