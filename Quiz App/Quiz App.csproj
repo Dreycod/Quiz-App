@@ -43,7 +43,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="Controller\" />
     <Folder Include="Services\" />
   </ItemGroup>
