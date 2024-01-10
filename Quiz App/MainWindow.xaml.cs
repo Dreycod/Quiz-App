@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Quiz_App.View;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -27,11 +28,6 @@ namespace Quiz_App
     /// </summary>
     public partial class MainWindow : Window
     {
-        int Amount;
-        int Category;
-        string StringCategory;
-        string Difficulty;
-        string Type;
 
         // Create me a dictionnary of string and int 
         string username = "Default";
@@ -172,6 +168,19 @@ namespace Quiz_App
         {
             DragMove();
         }
+=======
+        public MainWindow()
+        {
+            InitializeComponent();
+            Page_Dashboard dashboard = new Page_Dashboard();
+            Grid_Content.Children.Add(dashboard);
+        }
+
+        private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Close();

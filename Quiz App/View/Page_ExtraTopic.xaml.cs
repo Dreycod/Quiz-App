@@ -16,12 +16,11 @@ using System.Windows.Shapes;
 namespace Quiz_App.View
 {
     /// <summary>
-
-    /// Interaction logic for Page_QuizQuestions.xaml
+    /// Interaction logic for Page_ExtraTopic.xaml
     /// </summary>
-    public partial class Page_QuizQuestions : UserControl
+    public partial class Page_ExtraTopic : UserControl
     {
-        public Page_QuizQuestions()
+        public Page_ExtraTopic()
         {
             InitializeComponent();
         }
