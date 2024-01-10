@@ -37,8 +37,13 @@
                                     <ColumnDefinition Width="0.2*"/>
                                     <ColumnDefinition Width="0.8*"/>
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="80" Width="100"/>
-                                <Label Grid.Column="1" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                                
+                                <Button Click="Button_Click" Background="Transparent" Foreground="Transparent" Width="760" Grid.ColumnSpan="2">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="740">
+                                        <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="80" Width="100" HorizontalAlignment="Left"/>
+                                        <Label Grid.Column="1" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                                    </StackPanel>
+                                </Button>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>

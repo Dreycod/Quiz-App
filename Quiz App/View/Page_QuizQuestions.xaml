@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Quiz_App.View"
              mc:Ignorable="d" 
-             Height="539" Width="737">
+             Background="Transparent"
+             d:DesignHeight="539" d:DesignWidth="737">   
+    
     <Border BorderThickness="10" CornerRadius="35" Background="#ededed">
         <Grid Margin="15">
             <Grid.RowDefinitions>

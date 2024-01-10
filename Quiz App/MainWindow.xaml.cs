@@ -37,15 +37,23 @@ namespace Quiz_App
         List<Achievement> Ls_Achievements = new List<Achievement>();
         List<Category> Ls_Category = new List<Category>();  
 
-        static QuizAPI quizAPI = new QuizAPI();
-        static PlayerController playercontroller = new PlayerController();
-        static CategoryController categoryController = new CategoryController();
-        static Page_Dashboard page_dashboard = new Page_Dashboard();
-        static Page_ExtraTopic page_extratopic = new Page_ExtraTopic();
+        QuizAPI quizAPI = new QuizAPI();
+        PlayerController playercontroller;
+        CategoryController categoryController;
 
+        Page_Dashboard page_dashboard;
+        Page_ExtraTopic page_extratopic;
+        Page_Achievements page_achievement;
         public MainWindow()
         {
             InitializeComponent();
+
+            playercontroller = new PlayerController();
+            categoryController = new CategoryController();
+            page_dashboard = new Page_Dashboard();
+            page_extratopic = new Page_ExtraTopic(this);
+            page_achievement = new Page_Achievements();
+             
 
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_dashboard);
@@ -59,12 +67,12 @@ namespace Quiz_App
         }
 
         //listview clickable event handler itemselected for category
-        //private void LV_Categories_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    Category category = (Category)dashboard.LV_Categories.SelectedItem;
-        //    StringCategory = category.Content;
-        //    MessageBox.Show(StringCategory);
-        //}
+        private void LV_Categories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+         //   Category category = (Category)dashboard.LV_Categories.SelectedItem;
+           // StringCategory = category.Content;
+            //MessageBox.Show(StringCategory);
+        }
 
         private void DashboardBTN_Click(object sender, RoutedEventArgs e)
         {
@@ -74,9 +82,8 @@ namespace Quiz_App
 
         private void AchievementsBTN_Click(object sender, RoutedEventArgs e)
         {
-        //    achievementsPage = new Page_Dashboard();
-        //    Grid_Content.Children.Clear();
-        //    Grid_Content.Children.Add(achievementPage);
+            Grid_Content.Children.Clear();
+            Grid_Content.Children.Add(page_achievement);
         }
 
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
@@ -84,7 +91,6 @@ namespace Quiz_App
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_extratopic);
         }
-
         public async void GetQuiz()
         {
             Root root = await quizAPI.GetQuizRoot(Amount, Category, Difficulty, Type);

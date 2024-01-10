@@ -24,14 +24,35 @@ namespace Quiz_App.View
     {
         CategoryController categoryController { get; set; }
         List<Category> Ls_Category = new List<Category>();
-
-        public Page_ExtraTopic()
+        static Page_QuizQuestions page_quizquestions = new Page_QuizQuestions();
+        MainWindow mainwindow;
+        public Page_ExtraTopic(MainWindow window)
         {
             InitializeComponent();
             categoryController = new CategoryController();
+            mainwindow = window;
             Ls_Category = categoryController.GetListCategory();
-
             LV_Categories.ItemsSource = Ls_Category;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            Button button = (Button)sender;
+            StackPanel stackPanel = (StackPanel)button.Content;
+            Label label = (Label)stackPanel.Children[1];
+            string Category = label.Content.ToString();
+            Category category = categoryController.GetCategory(Category);
+            mainwindow.Grid_Content.Children.Clear();
+
+
+            mainwindow.Grid_Content.Children.Add(page_quizquestions);
+            int Amount = 10;
+            string Difficulty = "easy";
+            string _Type = "multiple";
+            // _GetQuiz();
+
+            
         }
     }
 }

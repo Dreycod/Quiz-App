@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quiz_App.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace Quiz_App.View
         public Page_QuizQuestions()
         {
             InitializeComponent();
+        }
+        public void UpdateInfo(Category category)
+        {
+           
         }
     }
 }

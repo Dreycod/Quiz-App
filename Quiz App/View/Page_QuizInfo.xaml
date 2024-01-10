@@ -2,11 +2,11 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-         xmlns:local="clr-namespace:Quiz_App.View"
-         mc:Ignorable="d" 
-         Background="Transparent"
-         d:DesignHeight="539" d:DesignWidth="737">
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Quiz_App.View"
+             mc:Ignorable="d" 
+             Background="Transparent"
+             d:DesignHeight="539" d:DesignWidth="737">
 
     <Border BorderThickness="10" CornerRadius="35" Background="#ededed">
         <Grid Margin="15">
