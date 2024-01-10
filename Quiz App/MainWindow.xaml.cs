@@ -35,10 +35,13 @@ namespace Quiz_App
             Grid_Content.Children.Add(dashboard);
         }
 
-        private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
+        //listview clickable event handler itemselected for category
+        //private void LV_Categories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    Category category = (Category)dashboard.LV_Categories.SelectedItem;
+        //    StringCategory = category.Content;
+        //    MessageBox.Show(StringCategory);
+        //}
 
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)

@@ -9,6 +9,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Ressources\Images\Achievements\Black.png" />
+    <None Remove="Ressources\Images\Achievements\Gold.png" />
+    <None Remove="Ressources\Images\Achievements\Silver.png" />
+    <None Remove="Ressources\Images\Answer.png" />
+    <None Remove="Ressources\Images\Categories\Animals.jpg" />
+    <None Remove="Ressources\Images\Categories\Animes_and_Manga.jpg" />
+    <None Remove="Ressources\Images\Categories\Arts.jpg" />
+    <None Remove="Ressources\Images\Categories\Board_Games.jpg" />
+    <None Remove="Ressources\Images\Categories\Books.jpg" />
+    <None Remove="Ressources\Images\Categories\Cartoons_and_Animations.jpg" />
+    <None Remove="Ressources\Images\Categories\Celebrities.jpg" />
+    <None Remove="Ressources\Images\Categories\Comics.jpg" />
+    <None Remove="Ressources\Images\Categories\Computer_Science.jpg" />
+    <None Remove="Ressources\Images\Categories\Films.jpg" />
+    <None Remove="Ressources\Images\Categories\Gadgets.jpg" />
+    <None Remove="Ressources\Images\Categories\General_Knowledge.jpg" />
+    <None Remove="Ressources\Images\Categories\Geography.jpg" />
+    <None Remove="Ressources\Images\Categories\History.jpg" />
+    <None Remove="Ressources\Images\Categories\Mathematics.jpg" />
+    <None Remove="Ressources\Images\Categories\Musicals_and_Theaters.jpg" />
+    <None Remove="Ressources\Images\Categories\Musics.jpg" />
+    <None Remove="Ressources\Images\Categories\Mythology.jpg" />
+    <None Remove="Ressources\Images\Categories\Politics.jpg" />
+    <None Remove="Ressources\Images\Categories\Science_and_Nature.jpg" />
+    <None Remove="Ressources\Images\Categories\Sports.jpg" />
+    <None Remove="Ressources\Images\Categories\Television.jpg" />
+    <None Remove="Ressources\Images\Categories\Vehicles.jpg" />
+    <None Remove="Ressources\Images\Categories\Video_Games.jpg" />
+    <None Remove="Ressources\Images\Crown.png" />
+    <None Remove="Ressources\Images\Profile.png" />
+    <None Remove="Ressources\Images\Time.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Controller\" />
     <Folder Include="Services\" />
@@ -16,6 +50,102 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ressources\Images\Achievements\Black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Achievements\Gold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Achievements\Silver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Answer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Animals.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Animes_and_Manga.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Arts.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Board_Games.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Books.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Cartoons_and_Animations.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Celebrities.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Comics.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Computer_Science.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Films.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Gadgets.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\General_Knowledge.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Geography.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\History.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Mathematics.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Musicals_and_Theaters.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Musics.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Mythology.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Politics.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Science_and_Nature.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Sports.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Television.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Vehicles.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Categories\Video_Games.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Crown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Profile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Images\Time.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

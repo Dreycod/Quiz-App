@@ -65,7 +65,7 @@
             </Border>
         </ControlTemplate>
     </Window.Template>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
