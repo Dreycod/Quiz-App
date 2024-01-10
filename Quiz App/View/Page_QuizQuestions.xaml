@@ -24,22 +24,34 @@
             </Grid>
 
             <Grid x:Name="Topics_Grid" Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
 
-                <ListView x:Name="Lv_Categories" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding Name}" Width="200"/>
-                                <TextBlock Text="{Binding Description}" Width="300"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="/Ressources/Images/Categories/General_Knowledge.jpg"/>
+                    <StackPanel Orientation="Vertical" Grid.Column="1">
+                        <Label Content="Question 1/20" Grid.Column="1" FontWeight="DemiBold" FontSize="20" Style="{StaticResource LB_Style_B}"/>
+                        <TextBox Text="Saviez-vous qu'André Suzuki était la?" Grid.Column="1" IsReadOnly="true" Background="Transparent" BorderThickness="0"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <StackPanel x:Name="" Orientation="Vertical">
+                        <!--General knowledge is inside Ressources/Images-->
+                        <Label Content="Choose answer" FontWeight="DemiBold" FontSize="20" Style="{StaticResource LB_Style_B}" Margin="10,5,5,5"/>
+                        <RadioButton Name="RB_Answer1" Content="Answer 1" Margin="20,0,0,5"/>
+                        <RadioButton Name="RB_Answer2" Content="Answer 2" Margin="20,0,0,5"/>
+                        <RadioButton Name="RB_Answer3" Content="Answer 3" Margin="20,0,0,5"/>
+                        <RadioButton Name="RB_Answer4" Content="Answer 4" Margin="20,0,0,5"/>
+                    </StackPanel>
+                </Grid>
             </Grid>
 
             <Grid x:Name="Bottom_Grid" Grid.Row="2">
@@ -52,7 +64,6 @@
                 </Grid.ColumnDefinitions>
 
                 <Button  Grid.Column="5" x:Name="More_AchievementsBtn" Content="More"/>
-                
             </Grid>
         </Grid>
     </Border>
