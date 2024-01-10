@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Quiz_App"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="697" Width="1059">
 
     <Window.Template>
         <ControlTemplate TargetType="{x:Type Window}">
@@ -67,8 +68,8 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
 
         <!-- ********************** Content *************************** -->
@@ -76,22 +77,53 @@
         </Grid>
         <!-- ********************** End of Content ********************* -->
         <!-- ********************** Dashboard ************************** -->
-        <Grid Name="Grid_Dashboard" Grid.Column="0" Background="Transparent">
+        <Grid Name="Grid_Buttons" Grid.Column="0" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
+            <Button Name="Dashboard_Btn" Grid.Row="0" Style="{StaticResource Btn_Menu}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
+                    <TextBlock Text="Dashboard" FontSize="20" FontWeight="Bold" Margin="10"/>
+                </StackPanel>
+            </Button>
+
+            <Button Name="Achievements_Btn" Grid.Row="1" Style="{StaticResource Btn_Menu}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
+                    <TextBlock Text="Achievements" FontSize="20" FontWeight="Bold" Margin="10"/>
+                </StackPanel>
+            </Button>
+
+            <Button Name="Categories_Btn" Grid.Row="2" Style="{StaticResource Btn_Menu}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
+                    <TextBlock Text="Categories" FontSize="20" FontWeight="Bold" Margin="10"/>
+                </StackPanel>
+            </Button>
+
+            <Button Name="Configurations_Btn" Grid.Row="9" Style="{StaticResource Btn_Menu}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
+                    <TextBlock Text="Configurations" FontSize="20" FontWeight="Bold" Margin="10"/>
+                </StackPanel>
+            </Button>
         </Grid>
+        
         <!-- ********************** End of Dashboard ******************* -->
-     <!--   <TextBox x:Name="TB_Amount" HorizontalAlignment="Left" Margin="414,191,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TB_Category" HorizontalAlignment="Left" Margin="413,220,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TB_Difficulty" HorizontalAlignment="Left" Margin="413,265,0,0" TextWrapping="Wrap" Text="Difficulty" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TB_Type" HorizontalAlignment="Left" Margin="413,323,0,0" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="600,218,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBox Name="QuestionLabel" Text="Question" Margin="41,22,28,299" FontSize="20" TextWrapping="Wrap" IsReadOnly="True" Background="Transparent" BorderThickness="0"/>
-        <RadioButton Name="Answer1Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,103,0,0" VerticalAlignment="Top"/>
-        <RadioButton Name="Answer2Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,135,0,0" VerticalAlignment="Top"/>
-        <RadioButton Name="Answer3Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,169,0,0" VerticalAlignment="Top"/>
-        <RadioButton Name="Answer4Button" Content="RadioButton" HorizontalAlignment="Left" Margin="41,201,0,0" VerticalAlignment="Top"/>
-        <Button Name="ConfirmAnswersButton" Content="Confirm" HorizontalAlignment="Left" Margin="41,232,0,0" VerticalAlignment="Top" Width="75" Click="ConfirmAnswersButton_Click"/>
-        <ProgressBar x:Name="ExpBar" HorizontalAlignment="Left" Height="21" Margin="350,60,0,0" VerticalAlignment="Top" Width="319" Foreground="#FF3D3D3D" Value="27"/>
-        <Button x:Name="ExpButton" Content="Free Exp" HorizontalAlignment="Left" Margin="486,118,0,0" VerticalAlignment="Top" Click="ExpButton_Click"/> -->
+        <!-- ********************** Boutons ******************* -->
+        <!-- ********************** End of Boutons ******************* -->
+
+
     </Grid>
 </Window>
