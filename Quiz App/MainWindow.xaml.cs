@@ -19,6 +19,7 @@ using Quiz_App.Controller;
 using Quiz_App.Model;
 using System.Reflection.Emit;
 using Quiz_App.View;
+using System.Reflection.Metadata;
 
 namespace Quiz_App
 {
@@ -43,22 +44,24 @@ namespace Quiz_App
         int correctAnswers = 0;
 
         QuizAPI quizAPI;
-        Category category;
         Player player;
+        List<Category> Ls_Category = new List<Category>();  
+        CategoryController categoryController;
 
         Page_Dashboard dashboard;
+        Page_ExtraTopic extraTopic;
 
         List<Achievements> Ls_Achievements = new List<Achievements>();
-        List<Category> Ls_Category = new List<Category>();
+        
 
         public MainWindow()
         {
             InitializeComponent();
 
             quizAPI = new QuizAPI();
-            category = new Category("Books");
             player = new Player(username, level, exp, wins, achievements, fastestTime, correctAnswers);
-
+            categoryController = new CategoryController();
+            
             // Appear dashboard_xaml Page
             dashboard = new Page_Dashboard();
             Grid_Content.Children.Clear();
@@ -80,11 +83,20 @@ namespace Quiz_App
 
             dashboard.PB_Player.Maximum = player.GetMaxExp();
             dashboard.PB_Player.Value = player.GetExp();
+            Achievements Achievement = new Achievements();
+            Achievement.Content = "Win your first game";
+            Achievement.ImageUrl = "/Ressources/Images/Achievements/Silver.png";
 
-            Ls_Achievements.Add(new Achievements() { ImageUrl = "/Ressources/Images/Achievements/Silver.png", Content = "Win your first game" });
+            Ls_Achievements.Add(Achievement);
             dashboard.LV_Achievements.ItemsSource = Ls_Achievements;
+            Category GeneralKnowledge = categoryController.GetCategory("General Knowledge");
+            GeneralKnowledge.ImageUrl = "/Ressources/Categories/General Knowledge.jpg";
 
-            Ls_Category.Add(new Category("General Knowledge") { ImageUrl = "/Ressources/Images/Categories/General_Knowledge.jpg", Content = "General Knowledge" });
+            Ls_Category.Add(GeneralKnowledge);
+            Ls_Category.Add(categoryController.GetCategory("Computers"));
+            Ls_Category.Add(categoryController.GetCategory("Anime & Manga"));
+            Ls_Category.Add(categoryController.GetCategory("History"));
+
             dashboard.LV_Categories.ItemsSource = Ls_Category;
         }
 
@@ -103,12 +115,19 @@ namespace Quiz_App
             Grid_Content.Children.Add(dashboard);
         }
 
+        private void AchievementsBTN_Click(object sender, RoutedEventArgs e)
+        {
+        //    achievementsPage = new Page_Dashboard();
+        //    Grid_Content.Children.Clear();
+        //    Grid_Content.Children.Add(achievementPage);
+        }
+
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
-            string content = btn.Content.ToString();
-
-            category = new Category(content);
+            extraTopic = new Page_ExtraTopic();
+            Grid_Content.Children.Clear();
+            Grid_Content.Children.Add(extraTopic);
+            
         }
 
         public async void GetQuiz()

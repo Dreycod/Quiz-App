@@ -93,28 +93,28 @@
 
             <Button Name="Dashboard_Btn" Grid.Row="0" Style="{StaticResource Btn_Menu}" Click="DashboardBTN_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
+                    <Image Source="Ressources/Images/Time.png" Width="30" Height="30" Margin="10"/>
                     <TextBlock Text="Dashboard" FontSize="20" FontWeight="Bold" Margin="10"/>
                 </StackPanel>
             </Button>
 
-            <Button Name="Achievements_Btn" Grid.Row="1" Style="{StaticResource Btn_Menu}">
+            <Button Name="Achievements_Btn" Grid.Row="1" Style="{StaticResource Btn_Menu}" Click="AchievementsBTN_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
+                    <Image Source="Ressources/Images/Crown.png" Width="30" Height="30" Margin="10"/>
                     <TextBlock Text="Achievements" FontSize="20" FontWeight="Bold" Margin="10"/>
                 </StackPanel>
             </Button>
 
             <Button Name="Categories_Btn" Grid.Row="2" Style="{StaticResource Btn_Menu}" Click="CategoryBTN_Click">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
+                    <Image Source="Ressources/Images/Answer.png" Width="30" Height="30" Margin="10"/>
                     <TextBlock Text="Categories" FontSize="20" FontWeight="Bold" Margin="10"/>
                 </StackPanel>
             </Button>
 
             <Button Name="Configurations_Btn" Grid.Row="9" Style="{StaticResource Btn_Menu}">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="Images\Dashboard.png" Width="30" Height="30" Margin="10"/>
+                    <Image Source="Ressources/Images/Profile.png" Width="30" Height="30" Margin="10"/>
                     <TextBlock Text="Configurations" FontSize="20" FontWeight="Bold" Margin="10"/>
                 </StackPanel>
             </Button>

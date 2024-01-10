@@ -7,14 +7,14 @@
              mc:Ignorable="d" 
              Background="Transparent"
              d:DesignHeight="539" d:DesignWidth="737">
-<!-- test-->
+    <!-- test-->
     <Border BorderThickness="10" CornerRadius="35" Background="#ededed">
         <Grid Margin="15">
             <Grid.RowDefinitions>
                 <RowDefinition Height="5*"/>
                 <RowDefinition Height="6.5*"/>
             </Grid.RowDefinitions>
-            
+
             <Grid Name="Player_Info" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2.5*"/>
@@ -53,7 +53,7 @@
                             <Image Grid.Column="0" Source="/Ressources/Images/Crown.png" Height="Auto" Width="Auto"/>
                             <Label Name="LB_Victories" Grid.Column="1" Content="Victories: 0" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
                         </Grid>
-                        
+
                         <Grid Grid.Column="1" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.4*"/>
@@ -64,7 +64,7 @@
                             <Image Grid.Column="0" Source="/Ressources/Images/Time.png" Height="30" Width="30"/>
                             <Label Name="LB_Time" Grid.Column="1" Content="Fastest Time: 0" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
                         </Grid>
-                        
+
                         <Grid Grid.Column="2" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="0.35*"/>
@@ -74,15 +74,15 @@
                             <Border Grid.Column="0" BorderThickness="0.2" BorderBrush="Black" CornerRadius="5" Background="White"/>
                             <Image Grid.Column="0" Source="/Ressources/Images/Answer.png" Height="30" Width="30"/>
                             <Label Name="LB_Answers" Grid.Column="1" Content="Correct Answers: 20m" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
-                        
-                        
+
+
                         </Grid>
 
 
                     </Grid>
                 </Grid>
             </Grid>
-            
+
             <Grid Name="Details" Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -101,7 +101,6 @@
                             <ColumnDefinition Width="0.35*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="Achievements" Grid.Row="0" Style="{StaticResource LB_Style_B}"/>
-                        <Button Grid.Column="1" Name="Btn_Achievements" Content="View All" Grid.Row="0" Style="{StaticResource Btn_Extra}"/>
                     </Grid>
 
                     <ListView Name="LV_Achievements" Grid.Row="1" Background="Transparent">
@@ -112,15 +111,15 @@
                                         <ColumnDefinition Width="0.2*"/>
                                         <ColumnDefinition Width="0.8*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="Auto" Width="Auto"/>
+                                    <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="50" Width="60"/>
                                     <Label Grid.Column="1" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    
+
                 </Grid>
-                
+
                 <Grid Name="Grid_Categories" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.25*"/>
@@ -134,8 +133,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Column="0" Content="Categories" FontWeight="Bold" Grid.Row="0" Style="{StaticResource LB_Style_B}"/>
-                        <Button Grid.Column="1" Name="Btn_Categories" Content="View All" Grid.Row="0" Style="{StaticResource Btn_Extra}"/>
-                        
+
                     </Grid>
 
                     <ListView Name="LV_Categories" Grid.Row="1" Background="Transparent">
@@ -146,7 +144,7 @@
                                         <ColumnDefinition Width="0.2*"/>
                                         <ColumnDefinition Width="0.8*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="Auto" Width="Auto"/>
+                                    <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="80" Width="100"/>
                                     <Label Grid.Column="1" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
                                 </Grid>
                             </DataTemplate>

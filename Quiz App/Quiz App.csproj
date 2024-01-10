@@ -14,29 +14,29 @@
     <None Remove="Ressources\Images\Achievements\Silver.png" />
     <None Remove="Ressources\Images\Answer.png" />
     <None Remove="Ressources\Images\Categories\Animals.jpg" />
-    <None Remove="Ressources\Images\Categories\Animes_and_Manga.jpg" />
-    <None Remove="Ressources\Images\Categories\Arts.jpg" />
-    <None Remove="Ressources\Images\Categories\Board_Games.jpg" />
+    <None Remove="Ressources\Images\Categories\Anime &amp; Manga.jpg" />
+    <None Remove="Ressources\Images\Categories\Art.jpg" />
+    <None Remove="Ressources\Images\Categories\Board Games.jpg" />
     <None Remove="Ressources\Images\Categories\Books.jpg" />
-    <None Remove="Ressources\Images\Categories\Cartoons_and_Animations.jpg" />
+    <None Remove="Ressources\Images\Categories\Cartoon &amp; Animations.jpg" />
     <None Remove="Ressources\Images\Categories\Celebrities.jpg" />
     <None Remove="Ressources\Images\Categories\Comics.jpg" />
-    <None Remove="Ressources\Images\Categories\Computer_Science.jpg" />
-    <None Remove="Ressources\Images\Categories\Films.jpg" />
+    <None Remove="Ressources\Images\Categories\Computers.jpg" />
+    <None Remove="Ressources\Images\Categories\Film.jpg" />
     <None Remove="Ressources\Images\Categories\Gadgets.jpg" />
-    <None Remove="Ressources\Images\Categories\General_Knowledge.jpg" />
+    <None Remove="Ressources\Images\Categories\General Knowledge.jpg" />
     <None Remove="Ressources\Images\Categories\Geography.jpg" />
     <None Remove="Ressources\Images\Categories\History.jpg" />
     <None Remove="Ressources\Images\Categories\Mathematics.jpg" />
-    <None Remove="Ressources\Images\Categories\Musicals_and_Theaters.jpg" />
-    <None Remove="Ressources\Images\Categories\Musics.jpg" />
+    <None Remove="Ressources\Images\Categories\Music.jpg" />
+    <None Remove="Ressources\Images\Categories\Musicals &amp; Theatres.jpg" />
     <None Remove="Ressources\Images\Categories\Mythology.jpg" />
     <None Remove="Ressources\Images\Categories\Politics.jpg" />
-    <None Remove="Ressources\Images\Categories\Science_and_Nature.jpg" />
+    <None Remove="Ressources\Images\Categories\Science &amp; Nature.jpg" />
     <None Remove="Ressources\Images\Categories\Sports.jpg" />
     <None Remove="Ressources\Images\Categories\Television.jpg" />
     <None Remove="Ressources\Images\Categories\Vehicles.jpg" />
-    <None Remove="Ressources\Images\Categories\Video_Games.jpg" />
+    <None Remove="Ressources\Images\Categories\Video Games.jpg" />
     <None Remove="Ressources\Images\Crown.png" />
     <None Remove="Ressources\Images\Profile.png" />
     <None Remove="Ressources\Images\Time.png" />
@@ -44,7 +44,6 @@
 
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="Controller\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
@@ -68,19 +67,19 @@
     <Resource Include="Ressources\Images\Categories\Animals.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Animes_and_Manga.jpg">
+    <Resource Include="Ressources\Images\Categories\Anime &amp; Manga.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Arts.jpg">
+    <Resource Include="Ressources\Images\Categories\Art.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Board_Games.jpg">
+    <Resource Include="Ressources\Images\Categories\Board Games.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\Images\Categories\Books.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Cartoons_and_Animations.jpg">
+    <Resource Include="Ressources\Images\Categories\Cartoon &amp; Animations.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\Images\Categories\Celebrities.jpg">
@@ -89,16 +88,16 @@
     <Resource Include="Ressources\Images\Categories\Comics.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Computer_Science.jpg">
+    <Resource Include="Ressources\Images\Categories\Computers.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Films.jpg">
+    <Resource Include="Ressources\Images\Categories\Film.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\Images\Categories\Gadgets.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\General_Knowledge.jpg">
+    <Resource Include="Ressources\Images\Categories\General Knowledge.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\Images\Categories\Geography.jpg">
@@ -110,10 +109,10 @@
     <Resource Include="Ressources\Images\Categories\Mathematics.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Musicals_and_Theaters.jpg">
+    <Resource Include="Ressources\Images\Categories\Musicals &amp; Theatres.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Musics.jpg">
+    <Resource Include="Ressources\Images\Categories\Music.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\Images\Categories\Mythology.jpg">
@@ -122,7 +121,7 @@
     <Resource Include="Ressources\Images\Categories\Politics.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Science_and_Nature.jpg">
+    <Resource Include="Ressources\Images\Categories\Science &amp; Nature.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\Images\Categories\Sports.jpg">
@@ -134,7 +133,7 @@
     <Resource Include="Ressources\Images\Categories\Vehicles.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Images\Categories\Video_Games.jpg">
+    <Resource Include="Ressources\Images\Categories\Video Games.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\Images\Crown.png">

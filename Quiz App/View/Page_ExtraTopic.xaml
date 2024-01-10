@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Quiz_App.View"
+             mc:Ignorable="d" 
              Background="Transparent"
-             Height="539" Width="737">
+             d:DesignHeight="539" d:DesignWidth="737">
     <!-- test-->
     <Border BorderThickness="10" CornerRadius="35" Background="#ededed">
         <Grid Margin="15">
@@ -26,18 +27,19 @@
             
             <Grid x:Name="Topics_Grid" Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                
-                <ListView x:Name="Lv_Categories" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <ListView Name="LV_Categories" Grid.Row="1" Background="Transparent">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding Name}" Width="200"/>
-                                <TextBlock Text="{Binding Description}" Width="300"/>
-                            </StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.8*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="80" Width="100"/>
+                                <Label Grid.Column="1" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                            </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

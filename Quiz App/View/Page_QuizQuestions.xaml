@@ -43,7 +43,7 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <StackPanel x:Name="" Orientation="Vertical">
+                    <StackPanel Orientation="Vertical">
                         <!--General knowledge is inside Ressources/Images-->
                         <Label Content="Choose answer" FontWeight="DemiBold" FontSize="20" Style="{StaticResource LB_Style_B}" Margin="10,5,5,5"/>
                         <RadioButton Name="RB_Answer1" Content="Answer 1" Margin="20,0,0,5"/>
