@@ -89,10 +89,7 @@ namespace Quiz_App
 
             Ls_Achievements.Add(Achievement);
             dashboard.LV_Achievements.ItemsSource = Ls_Achievements;
-            Category GeneralKnowledge = categoryController.GetCategory("General Knowledge");
-            GeneralKnowledge.ImageUrl = "/Ressources/Categories/General Knowledge.jpg";
-
-            Ls_Category.Add(GeneralKnowledge);
+            Ls_Category.Add(categoryController.GetCategory("General Knowledge"));
             Ls_Category.Add(categoryController.GetCategory("Computers"));
             Ls_Category.Add(categoryController.GetCategory("Anime & Manga"));
             Ls_Category.Add(categoryController.GetCategory("History"));

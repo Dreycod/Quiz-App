@@ -46,7 +46,7 @@ namespace Quiz_App.Controller
                 Category category = new Category();
                 category.Name = entry.Key;
                 category.Content = entry.Key;
-                category.ImageUrl = "/Ressources/Categories/" + entry.Key + ".jpg";
+                category.ImageUrl = "/Ressources/Images/Categories/" + entry.Key + ".jpg";
                 category.ID = entry.Value;
                 listCategory.Add(category);
             }
