@@ -26,16 +26,20 @@
             </Grid>
 
             <Grid x:Name="Main_Grid" Grid.Row="1">
-                <ListView Name="Achievements" Background="Transparent">
+                <ListView Name="LV_Achievements" Background="Transparent">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.2*"/>
                                     <ColumnDefinition Width="0.8*"/>
+                                    <ColumnDefinition Width="0.2*"/>
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="Auto" Width="Auto"/>
-                                <Label Grid.Column="1" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                                <Image Grid.Column="0" Source="{Binding ImageUrl}" Height="80" Width="90"/>
+                                <Label Grid.Column="1" Content="{Binding Name}" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                                <Label Grid.Column="2" Content="{Binding Content}" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource LB_Style_B}"/>
+                                <CheckBox Grid.Column="3" IsChecked="{Binding isAchievementUnlocked}" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="False"/>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -51,8 +55,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button  Grid.Column="5" x:Name="More_AchievementsBtn" Content="More"/>
-            </Grid>
+             </Grid>
         </Grid>
     </Border>
 </UserControl>
