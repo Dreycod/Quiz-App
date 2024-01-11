@@ -31,6 +31,7 @@ namespace Quiz_App.View
             InitializeComponent();
             playercontroller = plr_c;
             categoryController = cat_c;
+            UpdateInfo();
         }
 
         public void UpdateInfo()

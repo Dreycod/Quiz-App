@@ -19,5 +19,8 @@ namespace Quiz_App.Model
         public List<Achievement> Achievements { get; set;}
         public double FastestTime { get; set; }
         public int CorrectAnswers { get; set; }
+        public string ImageUrl { get; set; }
+        public string quizDifficulty { get; set; }
+        public int quizQuestionAmount { get; set; }
     }
 }

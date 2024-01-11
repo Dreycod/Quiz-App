@@ -39,7 +39,8 @@ namespace Quiz_App.View
                 LB_Question_Amount.Content = (int.Parse(LB_Question_Amount.Content.ToString()) - 1).ToString();
             }
 
-
+            Player player = playercontroller.GetPlayer();
+            player.quizQuestionAmount = int.Parse(LB_Question_Amount.Content.ToString());
         }
 
         private void QIncr_AmountBtn_Click(object sender, RoutedEventArgs e)
@@ -49,6 +50,8 @@ namespace Quiz_App.View
                 LB_Question_Amount.Content = (int.Parse(LB_Question_Amount.Content.ToString()) + 1).ToString();
             }
 
+            Player player = playercontroller.GetPlayer();
+            player.quizQuestionAmount = int.Parse(LB_Question_Amount.Content.ToString());
         }
 
         private void QDecr_DifficultyBtn_Click(object sender, RoutedEventArgs e)
@@ -59,6 +62,10 @@ namespace Quiz_App.View
                 LB_Quiz_Difficulty.Content = "Easy";
             else if (LB_Quiz_Difficulty.Content.ToString() == "Hard")
                 LB_Quiz_Difficulty.Content = "Medium";
+
+            Player player = playercontroller.GetPlayer();
+            player.quizDifficulty = LB_Quiz_Difficulty.Content.ToString();
+
         }
 
         private void QIncr_DifficultyBtn_Click(object sender, RoutedEventArgs e)

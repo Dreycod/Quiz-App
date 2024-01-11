@@ -24,6 +24,9 @@ namespace Quiz_App.Controller
             player.Achievements = new List<Achievement>();
             player.FastestTime = 0;
             player.CorrectAnswers = 0;
+            player.ImageUrl = "/Ressources/Images/Player/Default.png";
+            player.quizDifficulty = "Easy";
+            player.quizQuestionAmount = 10;
 
             Achievement Achievement = new Achievement();
             Achievement.Content = "Win your first game";

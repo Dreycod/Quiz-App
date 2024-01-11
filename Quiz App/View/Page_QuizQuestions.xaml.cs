@@ -25,8 +25,12 @@ namespace Quiz_App.View
     public partial class Page_QuizQuestions : UserControl
     {
         public Category current_category { get; set; }
+        public int Question_Amount { get; set; }
+        public string Quiz_Difficulty { get; set; }
+
         Root root;
         MainWindow mainwindow;
+        PlayerController playercontroller;
         int Number_Question = 0;
         int Questions_justes = 0;
 
@@ -36,13 +40,17 @@ namespace Quiz_App.View
         {
             InitializeComponent();
             mainwindow = main;
+            playercontroller = mainwindow.playercontroller;
         }
      
         public void UpdateInfo(bool NewQuiz)
         {
             GetQuiz(NewQuiz);
             LB_QuizName.Content = current_category.Name + " Quiz";
-            LB_Progress.Content = "Question " + (Number_Question+1) + " of 10";
+
+            Player player = playercontroller.GetPlayer();
+
+            LB_Progress.Content = "Question " + (Number_Question+1) + " of "+player.quizQuestionAmount;
 
         }
 
@@ -50,7 +58,9 @@ namespace Quiz_App.View
         {
             if (NewQuiz == true)
             { 
-                root = await quizAPI.GetQuizRoot(10, current_category.ID, "easy", "multiple");
+                Player player = playercontroller.GetPlayer();
+
+                root = await quizAPI.GetQuizRoot(player.quizQuestionAmount, current_category.ID, player.quizDifficulty.ToLower(), "multiple");
             }
 
             if (root == null)
@@ -107,7 +117,9 @@ namespace Quiz_App.View
                 }
             }
 
-            if (Number_Question == 9)
+            Player player = playercontroller.GetPlayer();
+
+            if (Number_Question == (player.quizQuestionAmount-1))
             {
                 MessageBox.Show("End of Quiz");
                 mainwindow.Grid_Content.Children.Clear();

@@ -29,7 +29,7 @@ namespace Quiz_App
     public partial class MainWindow : Window
     {
 
-        PlayerController playercontroller;
+        public PlayerController playercontroller;
         CategoryController categoryController;
         AchievementsController achievementsController;
 
