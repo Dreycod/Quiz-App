@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Quiz_App.Controller;
+using Quiz_App.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,17 @@ namespace Quiz_App.View
     /// </summary>
     public partial class Page_Achievements : UserControl
     {
-        public Page_Achievements()
+        List<Achievement> Ls_Achievement;
+
+        public Page_Achievements(AchievementsController achievementsController)
         {
             InitializeComponent();
+
+            Ls_Achievement = new List<Achievement>();
+            Ls_Achievement = achievementsController.GetListAchievements();
+            LV_Achievements.ItemsSource = Ls_Achievement;
+
         }
     }
 }
+

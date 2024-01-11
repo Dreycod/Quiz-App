@@ -10,7 +10,7 @@ using System.Windows.Controls;
 
 namespace Quiz_App.Controller
 {
-    internal class PlayerController
+    public class PlayerController
     {
         Player player = new Player();
 

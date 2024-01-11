@@ -7,7 +7,7 @@ using System.Windows;
 using Quiz_App.Model;
 namespace Quiz_App.Controller
 {
-    class CategoryController
+    public class CategoryController
     {
         List<Category> listCategory = new List<Category>();
 
