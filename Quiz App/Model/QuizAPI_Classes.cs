@@ -24,7 +24,7 @@ namespace Quiz_App.Model
 
 
 
-    internal class QuizAPI_Classes
+    public class QuizAPI_Classes
     {
     }
 }

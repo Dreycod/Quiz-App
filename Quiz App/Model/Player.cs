@@ -8,7 +8,7 @@ using Quiz_App.Model;
 
 namespace Quiz_App.Model
 {
-    class Player
+    public class Player
     {
         public string Username { get; set;}
         public int Level { get; set; }
