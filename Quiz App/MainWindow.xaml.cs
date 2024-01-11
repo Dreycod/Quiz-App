@@ -33,19 +33,22 @@ namespace Quiz_App
 
         PlayerController playercontroller;
         CategoryController categoryController;
+        AchievementsController achievementsController;
 
         public Page_Dashboard page_dashboard;
         Page_ExtraTopic page_extratopic;
         Page_Achievements page_achievement;
+       
         public MainWindow()
         {
             InitializeComponent();
 
             playercontroller = new PlayerController();
             categoryController = new CategoryController();
+            achievementsController = new AchievementsController(playercontroller);
+
             page_dashboard = new Page_Dashboard();
             page_extratopic = new Page_ExtraTopic(this);
-            page_achievement = new Page_Achievements();
              
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_dashboard);
