@@ -14,5 +14,7 @@ namespace Quiz_App.Model
         public int ID { get; set; }
         public string Content { get; set; }
         public string ImageUrl { get;set; }
+        public int Time { get; set; }
+        public int Points { get; set; }
     }
 }

@@ -49,10 +49,10 @@
                     <StackPanel Name="SP_RB" Orientation="Vertical">
                         <!--General knowledge is inside Ressources/Images-->
                         <Label Content="Choose answer" FontWeight="DemiBold" FontSize="20" Style="{StaticResource LB_Style_B}" Margin="10,5,5,5"/>
-                        <RadioButton Name="RB_Answer1" Content="Answer 1" Margin="20,0,0,5"/>
-                        <RadioButton Name="RB_Answer2" Content="Answer 2" Margin="20,0,0,5"/>
-                        <RadioButton Name="RB_Answer3" Content="Answer 3" Margin="20,0,0,5"/>
-                        <RadioButton Name="RB_Answer4" Content="Answer 4" Margin="20,0,0,5"/>
+                        <RadioButton Name="RB_Answer1" Content="Answer 1" Style="{StaticResource RB_Style}" />
+                        <RadioButton Name="RB_Answer2" Content="Answer 2" Style="{StaticResource RB_Style}"/>
+                        <RadioButton Name="RB_Answer3" Content="Answer 3" Style="{StaticResource RB_Style}"/>
+                        <RadioButton Name="RB_Answer4" Content="Answer 4" Style="{StaticResource RB_Style}"/>
                     </StackPanel>
                 </Grid>
             </Grid>
@@ -66,7 +66,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button  Grid.Column="5" x:Name="Next_Btn" Content="Next" Click="ValidateAnswer"/>
+                <Button  Grid.Column="5" x:Name="Next_Btn" Content="Next" Click="ValidateAnswer" Style="{StaticResource Btn_Extra}"/>
             </Grid>
         </Grid>
     </Border>

@@ -37,8 +37,8 @@ namespace Quiz_App.View
             LB_QuizName.Content = "Quiz "+current_category.Name;
             Category_IMG.Source = new BitmapImage(new Uri(current_category.ImageUrl, UriKind.Relative));
             LB_Date.Content = DateTime.Now.ToString("dd/MM/yyyy");
-            // LB_Time.Content = current_category.Time;
-            // LB_Difficulty.Content = current_category.Difficulty;
+            LB_Time.Content = current_category.Time.ToString();
+            LB_Points.Content = current_category.Points.ToString() + " Points";
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)
