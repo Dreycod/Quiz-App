@@ -28,8 +28,6 @@ namespace Quiz_App
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Achievement> Ls_Achievements = new List<Achievement>();
-        List<Category> Ls_Category = new List<Category>();  
 
         PlayerController playercontroller;
         CategoryController categoryController;
@@ -38,6 +36,7 @@ namespace Quiz_App
         public Page_Dashboard page_dashboard;
         Page_ExtraTopic page_extratopic;
         Page_Achievements page_achievement;
+        Page_Configurations page_configurations;
        
         public MainWindow()
         {
@@ -47,19 +46,13 @@ namespace Quiz_App
             categoryController = new CategoryController();
             achievementsController = new AchievementsController(playercontroller);
 
-            page_dashboard = new Page_Dashboard();
+            page_dashboard = new Page_Dashboard(playercontroller,categoryController);
             page_extratopic = new Page_ExtraTopic(this);
             page_achievement = new Page_Achievements(achievementsController);
+            page_configurations = new Page_Configurations(playercontroller,page_dashboard);
 
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_dashboard);
-
-            Ls_Category.Add(categoryController.GetCategory("General Knowledge"));
-            Ls_Category.Add(categoryController.GetCategory("Computers"));
-            Ls_Category.Add(categoryController.GetCategory("Anime & Manga"));
-            Ls_Category.Add(categoryController.GetCategory("History"));
-
-            page_dashboard.UpdateInfo(playercontroller.GetDashBoardInfo(), Ls_Category);
         }
 
         private void DashboardBTN_Click(object sender, RoutedEventArgs e)
@@ -80,9 +73,10 @@ namespace Quiz_App
             Grid_Content.Children.Add(page_extratopic);
         }
 
-        private void ExpButton_Click(object sender, RoutedEventArgs e)
+        private void ConfigurationBTN_Click(object sender, RoutedEventArgs e)
         {
-            playercontroller.AddExp(10);
+            Grid_Content.Children.Clear();
+            Grid_Content.Children.Add(page_configurations);
         }
 
         private void TopBar_MouseDown(object sender, MouseButtonEventArgs e)

@@ -24,13 +24,24 @@ namespace Quiz_App.View
     /// </summary>
     public partial class Page_Dashboard : UserControl
     {
-        public Page_Dashboard()
+        PlayerController playercontroller;
+        CategoryController categoryController;
+        public Page_Dashboard(PlayerController plr_c,CategoryController cat_c)
         {
             InitializeComponent();
+            playercontroller = plr_c;
+            categoryController = cat_c;
         }
 
-        public void UpdateInfo((string, List<int>, double, List<Achievement>) GeneralInfo, List<Category> categories)
+        public void UpdateInfo()
         {
+            List<Category> Ls_Category = new List<Category>();
+            Ls_Category.Add(categoryController.GetCategory("General Knowledge"));
+            Ls_Category.Add(categoryController.GetCategory("Computers"));
+            Ls_Category.Add(categoryController.GetCategory("Anime & Manga"));
+            Ls_Category.Add(categoryController.GetCategory("History"));
+            (string, List<int>, double, List<Achievement>) GeneralInfo = playercontroller.GetDashBoardInfo();
+
             LB_Username.Content = GeneralInfo.Item1;
             LB_Level.Content = "Lvl." + GeneralInfo.Item2[0].ToString();
             LB_Victories.Content = "Victories: "+GeneralInfo.Item2[1];
@@ -39,9 +50,8 @@ namespace Quiz_App.View
             LB_Answers.Content = "Correct Answers: "+GeneralInfo.Item2[4];
             LB_Time.Content = "Fastest Time: "+GeneralInfo.Item3;
             LV_Achievements.ItemsSource = GeneralInfo.Item4;
-            LV_Categories.ItemsSource = categories;
-
+            LV_Categories.ItemsSource = Ls_Category;
         }
-
+    
     }
 }
