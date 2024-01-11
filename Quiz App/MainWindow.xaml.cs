@@ -49,7 +49,8 @@ namespace Quiz_App
 
             page_dashboard = new Page_Dashboard();
             page_extratopic = new Page_ExtraTopic(this);
-             
+            page_achievement = new Page_Achievements(achievementsController);
+
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_dashboard);
 
