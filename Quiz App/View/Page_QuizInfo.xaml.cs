@@ -29,7 +29,7 @@ namespace Quiz_App.View
         {
             InitializeComponent();
             mainwindow = main;
-            page_quizquestions = new Page_QuizQuestions();
+            page_quizquestions = new Page_QuizQuestions(main);
         }
 
         public void UpdateInfo()
@@ -46,7 +46,8 @@ namespace Quiz_App.View
             Button button = (Button)sender;
             mainwindow.Grid_Content.Children.Clear();
             page_quizquestions.current_category = current_category;
-            page_quizquestions.UpdateInfo();
+            page_quizquestions.Image_Test.Source = new BitmapImage(new Uri(current_category.ImageUrl, UriKind.Relative));
+            page_quizquestions.UpdateInfo(true);
             mainwindow.Grid_Content.Children.Add(page_quizquestions);
         }
     }

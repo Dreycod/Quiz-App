@@ -3,6 +3,7 @@ using Quiz_App.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,40 +18,41 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Quiz_App.View
-{
+{ 
     /// <summary>
     /// Interaction logic for Page_QuizQuestions.xaml
     /// </summary>
     public partial class Page_QuizQuestions : UserControl
     {
         public Category current_category { get; set; }
-        Category last_category;
         Root root;
+        MainWindow mainwindow;
         int Number_Question = 0;
+        int Questions_justes = 0;
 
         QuizAPI quizAPI = new QuizAPI();
 
-        public Page_QuizQuestions()
+        public Page_QuizQuestions(MainWindow main)
         {
             InitializeComponent();
+            mainwindow = main;
         }
      
-        public void UpdateInfo()
+        public void UpdateInfo(bool NewQuiz)
         {
-            GetQuiz();
-
+            GetQuiz(NewQuiz);
             LB_QuizName.Content = current_category.Name + " Quiz";
             LB_Progress.Content = "Question " + (Number_Question+1) + " of 10";
 
         }
 
-        public async void GetQuiz()
+        public async void GetQuiz(bool NewQuiz)
         {
-            if (current_category != last_category)
+            if (NewQuiz == true)
             { 
                 root = await quizAPI.GetQuizRoot(10, current_category.ID, "easy", "multiple");
             }
-            MessageBox.Show(root.results.ToString());
+
             if (root == null)
             {
                 Debug.WriteLine("Error in getting data");
@@ -99,13 +101,26 @@ namespace Quiz_App.View
                 {
                     if(radiobutton.Content.ToString() == root.results[Number_Question].correct_answer.ToString())
                     {
+                        Questions_justes++;
                         MessageBox.Show("Correct Answer");
                     }
                 }
             }
 
-            Number_Question++;
-            UpdateInfo();
+            if (Number_Question == 9)
+            {
+                MessageBox.Show("End of Quiz");
+                mainwindow.Grid_Content.Children.Clear();
+                mainwindow.Grid_Content.Children.Add(mainwindow.page_dashboard);
+                Number_Question = 0;
+                Questions_justes = 0;
+                return;
+            } 
+            else
+            {
+                Number_Question++;
+                UpdateInfo(false);
+            }
         }
     }
 }
