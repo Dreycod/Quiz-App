@@ -1,4 +1,5 @@
-﻿using Quiz_App.Controller;
+﻿using Microsoft.Win32;
+using Quiz_App.Controller;
 using Quiz_App.Model;
 using System;
 using System.Collections.Generic;
@@ -53,6 +54,17 @@ namespace Quiz_App.View
             LV_Achievements.ItemsSource = GeneralInfo.Item4;
             LV_Categories.ItemsSource = Ls_Category;
         }
-    
+
+        private void UploadPfpButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select Profile Picture";
+            op.Filter = "Image files (*.png)|*.png;";
+            if (op.ShowDialog() == true)
+            {
+                ProfilePicture.Source = new BitmapImage(new Uri(op.FileName));
+            }
+        }
+
     }
 }

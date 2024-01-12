@@ -57,24 +57,28 @@ namespace Quiz_App
 
         private void DashboardBTN_Click(object sender, RoutedEventArgs e)
         {
+            PlayClickSFX();
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_dashboard);
         }
 
         private void AchievementsBTN_Click(object sender, RoutedEventArgs e)
         {
+            PlayClickSFX();
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_achievement);
         }
 
         private void CategoryBTN_Click(object sender, RoutedEventArgs e)
         {
+            PlayClickSFX();
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_extratopic);
         }
 
         private void ConfigurationBTN_Click(object sender, RoutedEventArgs e)
         {
+            PlayClickSFX();
             Grid_Content.Children.Clear();
             Grid_Content.Children.Add(page_configurations);
         }
@@ -86,6 +90,13 @@ namespace Quiz_App
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+        private void PlayClickSFX() // Function to play the music
+        {
+            ClickSFX.Volume = 1.0;
+            ClickSFX.Open(new Uri(AudioPathClickSFX, UriKind.Relative));
+            ClickSFX.Play();
+
         }
     }
 }
