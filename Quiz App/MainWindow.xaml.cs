@@ -37,11 +37,15 @@ namespace Quiz_App
         Page_ExtraTopic page_extratopic;
         Page_Achievements page_achievement;
         Page_Configurations page_configurations;
-       
+
+        String AudioPathClickSFX = "Ressources/Sounds/ClickSFX.mp3";
+        MediaPlayer ClickSFX;
+
         public MainWindow()
         {
             InitializeComponent();
 
+            ClickSFX = new MediaPlayer();
             playercontroller = new PlayerController();
             categoryController = new CategoryController();
             achievementsController = new AchievementsController(playercontroller);
