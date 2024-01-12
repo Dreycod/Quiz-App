@@ -27,11 +27,13 @@ namespace Quiz_App.View
     {
         PlayerController playercontroller;
         CategoryController categoryController;
-        public Page_Dashboard(PlayerController plr_c,CategoryController cat_c)
+        AchievementsController achievementscontroller;
+        public Page_Dashboard(PlayerController plr_c,CategoryController cat_c, AchievementsController achievement_c)
         {
             InitializeComponent();
             playercontroller = plr_c;
             categoryController = cat_c;
+            achievementscontroller = achievement_c;
             UpdateInfo();
         }
 
@@ -53,6 +55,7 @@ namespace Quiz_App.View
             LB_Time.Content = "Fastest Time: "+GeneralInfo.Item3;
             LV_Achievements.ItemsSource = GeneralInfo.Item4;
             LV_Categories.ItemsSource = Ls_Category;
+            achievementscontroller.CheckAchievements(playercontroller);
         }
 
         private void UploadPfpButton_Click(object sender, RoutedEventArgs e)

@@ -18,7 +18,7 @@ namespace Quiz_App.Controller
         {
             player.Username = "Default";
             player.Level = 1;
-            player.Exp = 10;
+            player.Exp = 0;
             player.MaxExp = 20;
             player.Wins = 0;
             player.Achievements = new List<Achievement>();

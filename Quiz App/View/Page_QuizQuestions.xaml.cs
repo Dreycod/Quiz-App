@@ -59,7 +59,7 @@ namespace Quiz_App.View
             if (NewQuiz == true)
             { 
                 Player player = playercontroller.GetPlayer();
-
+                Number_Question = 0;
                 root = await quizAPI.GetQuizRoot(player.quizQuestionAmount, current_category.ID, player.quizDifficulty.ToLower(), "multiple");
             }
 
@@ -121,9 +121,20 @@ namespace Quiz_App.View
 
             if (Number_Question == (player.quizQuestionAmount-1))
             {
-                MessageBox.Show("End of Quiz");
+
+                playercontroller.AddExp(Questions_justes * 10);
+                player.CorrectAnswers += Questions_justes;
+                if (Questions_justes != 0)
+                {
+                    if (((Questions_justes/player.quizQuestionAmount) * 100) >= 70)
+                    {
+                        MessageBox.Show(" Answers: " + Questions_justes + "/" + player.quizQuestionAmount + "\nYou won the quiz");
+                        player.Wins++;
+                    }
+                }
                 mainwindow.Grid_Content.Children.Clear();
                 mainwindow.Grid_Content.Children.Add(mainwindow.page_dashboard);
+                mainwindow.page_dashboard.UpdateInfo();
                 Number_Question = 0;
                 Questions_justes = 0;
                 return;

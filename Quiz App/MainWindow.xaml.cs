@@ -50,7 +50,7 @@ namespace Quiz_App
             categoryController = new CategoryController();
             achievementsController = new AchievementsController(playercontroller);
 
-            page_dashboard = new Page_Dashboard(playercontroller,categoryController);
+            page_dashboard = new Page_Dashboard(playercontroller,categoryController,achievementsController);
             page_extratopic = new Page_ExtraTopic(this);
             page_achievement = new Page_Achievements(achievementsController);
             page_configurations = new Page_Configurations(playercontroller,page_dashboard);

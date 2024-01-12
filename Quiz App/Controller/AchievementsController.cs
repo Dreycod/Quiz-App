@@ -33,7 +33,7 @@ namespace Quiz_App.Controller
         static public Dictionary<string, string> listAchievementsContent = new Dictionary<string, string>()
         {
             {"Fresh Start", "Complete your first quiz"},
-            {"Adept", "Complete 5 quizzes"},
+            {"Adept", "Reach level 5"},
             {"Speedrunner", "Complete a quiz in less than 1 minute"},
             {"Tryharder", "Complete 100 quizzes"},
         };
@@ -84,6 +84,40 @@ namespace Quiz_App.Controller
                 listAchievements.Add(achievement);
             }
         }
+
+        public void CheckAchievements(PlayerController playerController)
+        {
+            Player player = playerController.GetPlayer();
+            
+            foreach (Achievement achievement in listAchievements)
+            {
+                player.Achievements.Remove(achievement);
+
+                var property = typeof(Player).GetProperty(achievement.RequirementType);
+
+                var playerValue = property.GetValue(player);
+
+                if (playerValue is int intValue)
+                {
+                    achievement.isAchievementUnlocked = intValue >= achievement.Requirements;
+                }
+                else if (playerValue is double doubleValue)
+                {
+                    achievement.isAchievementUnlocked = doubleValue >= achievement.Requirements;
+                }
+
+                if (achievement.isAchievementUnlocked == true)
+                {
+                    achievement.ImageUrl = listAchievementsRarity[achievement.Name];
+                    playerController.GetPlayer().Achievements.Add(achievement);
+                }
+                else
+                {
+                    achievement.ImageUrl = "/Ressources/Images/Achievements/Black.png";
+                }
+            }
+        }
+
         public string GetAchievementTypeByID(int ID)
         {
             foreach (KeyValuePair<int, string> entry in listRequirements)
