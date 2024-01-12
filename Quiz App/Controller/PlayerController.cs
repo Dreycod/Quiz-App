@@ -28,10 +28,6 @@ namespace Quiz_App.Controller
             player.quizDifficulty = "Easy";
             player.quizQuestionAmount = 10;
 
-            Achievement Achievement = new Achievement();
-            Achievement.Content = "Win your first game";
-            Achievement.ImageUrl = "/Ressources/Images/Achievements/Silver.png";
-            player.Achievements.Add(Achievement);
         }
 
         public Player GetPlayer()

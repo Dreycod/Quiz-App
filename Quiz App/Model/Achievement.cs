@@ -10,8 +10,10 @@ namespace Quiz_App.Model
     {
         public string Name { get; set; }
         public bool isAchievementUnlocked { get; set; }
+        public string RequirementType { get; set; }
         public int Requirements { get; set; }
         public string ImageUrl { get; set; }
         public string Content { get; set; }
+
     }
 }
