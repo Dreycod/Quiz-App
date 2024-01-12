@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Ressources\Data.json" />
     <None Remove="Ressources\Images\Achievements\Black.png" />
     <None Remove="Ressources\Images\Achievements\Gold.png" />
     <None Remove="Ressources\Images\Achievements\Silver.png" />
@@ -40,6 +41,10 @@
     <None Remove="Ressources\Images\Crown.png" />
     <None Remove="Ressources\Images\Profile.png" />
     <None Remove="Ressources\Images\Time.png" />
+    <None Remove="Ressources\Sounds\ClickSFX.mp3" />
+    <None Remove="Ressources\Sounds\LevelUpSFX.mp3" />
+    <None Remove="Ressources\Sounds\se-no-bi.mp3" />
+    <None Remove="Ressources\Sounds\WinSFX.mp3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +56,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Ressources\Data.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Ressources\Images\Achievements\Black.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -144,6 +152,18 @@
     <Resource Include="Ressources\Images\Time.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Ressources\Sounds\ClickSFX.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\Sounds\LevelUpSFX.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\Sounds\se-no-bi.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\Sounds\WinSFX.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -28,6 +28,10 @@ namespace Quiz_App.View
         public int Question_Amount { get; set; }
         public string Quiz_Difficulty { get; set; }
 
+        String AudioPathWinSFX = "Ressources/Sounds/WinSFX.mp3";
+        MediaPlayer WinSFX;
+
+
         Root root;
         MainWindow mainwindow;
         PlayerController playercontroller;
@@ -39,6 +43,8 @@ namespace Quiz_App.View
         public Page_QuizQuestions(MainWindow main)
         {
             InitializeComponent();
+            WinSFX = new MediaPlayer();
+
             mainwindow = main;
             playercontroller = mainwindow.playercontroller;
         }
@@ -102,7 +108,6 @@ namespace Quiz_App.View
                     break;
             }
         }
-
         public void ValidateAnswer(object sender, RoutedEventArgs e)
         {
             foreach(RadioButton radiobutton in SP_RB.Children.OfType<RadioButton>())
@@ -121,13 +126,15 @@ namespace Quiz_App.View
 
             if (Number_Question == (player.quizQuestionAmount-1))
             {
+                WinSFX.Open(new Uri(AudioPathWinSFX, UriKind.Relative));
+                WinSFX.Play();
                 MessageBox.Show("End of Quiz");
                 mainwindow.Grid_Content.Children.Clear();
                 mainwindow.Grid_Content.Children.Add(mainwindow.page_dashboard);
                 Number_Question = 0;
                 Questions_justes = 0;
                 return;
-            } 
+            }
             else
             {
                 Number_Question++;

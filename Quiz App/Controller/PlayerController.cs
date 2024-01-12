@@ -7,12 +7,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Automation.Peers;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Quiz_App.Controller
 {
     public class PlayerController
     {
         Player player = new Player();
+
+        String AudioPathLevelUpSFX = "Ressources/Sounds/LevelUpSFX.mp3";
+        MediaPlayer LevelUpSFX = new MediaPlayer();
 
         public PlayerController()
         {
@@ -103,6 +107,8 @@ namespace Quiz_App.Controller
             {
                 player.MaxExp *= 2;
                 player.Level++;
+                LevelUpSFX.Open(new Uri(AudioPathLevelUpSFX, UriKind.Relative));
+                LevelUpSFX.Play();
             }
         }
 

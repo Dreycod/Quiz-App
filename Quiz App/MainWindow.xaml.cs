@@ -39,13 +39,23 @@ namespace Quiz_App
         Page_Configurations page_configurations;
 
         String AudioPathClickSFX = "Ressources/Sounds/ClickSFX.mp3";
+        String AudioPathWinSFX = "Ressources/Sounds/WinSFX.mp3";
+
+        String AudioPathBGM = "Ressources/Sounds/se-no-bi.mp3";
         MediaPlayer ClickSFX;
+        MediaPlayer BGM;
 
         public MainWindow()
         {
             InitializeComponent();
 
             ClickSFX = new MediaPlayer();
+            BGM = new MediaPlayer();
+
+            BGM.Volume = 0.1; 
+            BGM.Open(new Uri(AudioPathBGM, UriKind.Relative));
+            BGM.Play();
+
             playercontroller = new PlayerController();
             categoryController = new CategoryController();
             achievementsController = new AchievementsController(playercontroller);
@@ -93,6 +103,9 @@ namespace Quiz_App
         }
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
+            (string,List<int>,double,List<Achievement>) listData = playercontroller.GetDashBoardInfo();
+            string Json = JsonConvert.SerializeObject(listData);
+            //File.WriteAllText("Ressources/Data.json", Json);
             Close();
         }
         private void PlayClickSFX() // Function to play the music
