@@ -114,6 +114,10 @@ namespace Quiz_App.View
                         Questions_justes++;
                         MessageBox.Show("Correct Answer");
                     }
+                    else
+                    {
+                        MessageBox.Show("Wrong Answer, the correct answer was: "+ root.results[Number_Question].correct_answer.ToString());
+                    }
                 }
             }
 
